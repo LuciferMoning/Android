@@ -537,7 +537,7 @@ public class ConnectTransport {
     }
     //结束
     //返回信息表示接收到信息了
-    public void receive2( ){
+    public void receive_End( ){
         TYPE3 = 0X00;
         determine = 0x00;
         TYPE = 0x00;

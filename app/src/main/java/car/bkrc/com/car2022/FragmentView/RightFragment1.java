@@ -146,7 +146,6 @@ public class RightFragment1 extends Fragment {
     private Handler rehHandler = new Handler() {
         @SuppressLint("SetTextI18n")
         public void handleMessage(Message msg) {
-
             if (msg.what == 1) {
                 byte[] mByte = (byte[]) msg.obj;
                 if (mByte[0] == 0x55) {
@@ -172,7 +171,7 @@ public class RightFragment1 extends Fragment {
                     if (mByte[1] == (byte) 0xaa) {  //主车
                         if (dateGetState) {
                             // 显示数据
-                            stateTV.setText(mByte[2] + "");           // 运行状态
+                            stateTV.setText(mByte[2] + "");              // 运行状态
                             psStatusTV.setText(psStatus + "");        // 光敏电阻
                             codedDiskTV.setText(codedDisk + "");      // 码盘
                             lightTV.setText(light + " lx");           // 光照度
@@ -229,11 +228,9 @@ public class RightFragment1 extends Fragment {
                     plan(mByte[3]);
 
                 }else if(mByte[2] == 0x03){//信号灯识别
-                    bt_start_initial.performClick();
-                    bt_up.performClick();
-                    bt_up.performClick();
-                    connectTransport.yanchi(3000);
+
                     connectTransport.receive( 2);
+                    Connect_Transport.yanchi(1000);
                     trafficLightDis(bitmap);
                     iniColor(bitmap);
 
@@ -252,11 +249,8 @@ public class RightFragment1 extends Fragment {
                                 Connect_Transport.traffic_control(0x14, 0x02, inColor);
                                 break;
                         }
+                        connectTransport.receive_End();
                     }
-                    bt_down.performClick();
-                    bt_down.performClick();
-                    connectTransport.receive2();
-
                 }else if(mByte[2] == 0x05){//行人戴口罩
                     connectTransport.receive( 2);
                     position();
@@ -280,6 +274,7 @@ public class RightFragment1 extends Fragment {
                     connectTransport.receive( 2);
                 }else if(mByte[2] == 0x11){ //打开道闸
                     connectTransport.receive( 2);
+
                     Connect_Transport.gate(0x10, planss[0], planss[1], planss[2]);
                     Connect_Transport.yanchi(500);
                     Connect_Transport.gate(0x11, planss[3], planss[4], planss[5]);
@@ -924,6 +919,12 @@ public class RightFragment1 extends Fragment {
         LeftFragment.image_show.setImageBitmap(bitmap);
         // return bitmap;
     }
+
+    /**
+     * @brief 颜色识别
+     *
+     * @param bitmap    图片
+     */
     private void iniColor(Bitmap bitmap) {
         int width = bitmap.getWidth();
         int height = bitmap.getHeight();
@@ -1175,8 +1176,6 @@ public class RightFragment1 extends Fragment {
                         for (int i = 0; i < listqr.size(); i++) {
                             strings[i] = listqr.get(i);
                         }
-                        longestSubstring = car.bkrc.com.car2022.bar.Text.sumResult.findLongestCommonSubstring(strings);
-                        Log.e(TAG, "PLANT_handleMessage: " + longestSubstring);
 //                        longestSubstring = longestCommonSubstring(strings);
                         if(listqr.size() == 4){
 

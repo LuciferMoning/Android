@@ -67,5 +67,4 @@ public class PlateManager {
             recognizeThread.addMat(mat);
         }
     }
-
 }
