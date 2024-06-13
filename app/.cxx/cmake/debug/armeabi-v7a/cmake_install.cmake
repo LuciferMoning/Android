@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/86188/Desktop/8_Car2022_Example_v1.1/app/src/main/jniLibs
+# Install script for directory: C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/src/main/jniLibs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/86188/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,1 +1,1 @@
-C:\Users\86188\Desktop\8_Car2022_Example_v1.1\app\src\main\jniLibs\CMakeLists.txt
+C:\Users\35196\Desktop\8_Car2022_Example_v1.1\app\src\main\jniLibs\CMakeLists.txt

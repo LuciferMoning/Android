@@ -1,21 +1,21 @@
-                    Executable : D:\android\Sdk\cmake\3.10.2.4988404\bin\cmake.exe
+                    Executable : C:\Software\DevelopmentEnvironment\Android\SDK\cmake\3.10.2.4988404\bin\cmake.exe
 arguments : 
--HC:\Users\86188\Desktop\8_Car2022_Example_v1.1\app\src\main\jniLibs
--DCMAKE_FIND_ROOT_PATH=C:\Users\86188\Desktop\8_Car2022_Example_v1.1\app\.cxx\cmake\debug\prefab\armeabi-v7a\prefab
+-HC:\Users\35196\Desktop\8_Car2022_Example_v1.1\app\src\main\jniLibs
+-DCMAKE_FIND_ROOT_PATH=C:\Users\35196\Desktop\8_Car2022_Example_v1.1\app\.cxx\cmake\debug\prefab\armeabi-v7a\prefab
 -DCMAKE_BUILD_TYPE=Debug
--DCMAKE_TOOLCHAIN_FILE=D:\android\Sdk\ndk\26.2.11394342\build\cmake\android.toolchain.cmake
+-DCMAKE_TOOLCHAIN_FILE=C:\Software\DevelopmentEnvironment\Android\SDK\ndk\27.0.11902837\build\cmake\android.toolchain.cmake
 -DANDROID_ABI=armeabi-v7a
--DANDROID_NDK=D:\android\Sdk\ndk\26.2.11394342
+-DANDROID_NDK=C:\Software\DevelopmentEnvironment\Android\SDK\ndk\27.0.11902837
 -DANDROID_PLATFORM=android-24
 -DCMAKE_ANDROID_ARCH_ABI=armeabi-v7a
--DCMAKE_ANDROID_NDK=D:\android\Sdk\ndk\26.2.11394342
+-DCMAKE_ANDROID_NDK=C:\Software\DevelopmentEnvironment\Android\SDK\ndk\27.0.11902837
 -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
--DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Users\86188\Desktop\8_Car2022_Example_v1.1\app\build\intermediates\cmake\debug\obj\armeabi-v7a
--DCMAKE_RUNTIME_OUTPUT_DIRECTORY=C:\Users\86188\Desktop\8_Car2022_Example_v1.1\app\build\intermediates\cmake\debug\obj\armeabi-v7a
--DCMAKE_MAKE_PROGRAM=D:\android\Sdk\cmake\3.10.2.4988404\bin\ninja.exe
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Users\35196\Desktop\8_Car2022_Example_v1.1\app\build\intermediates\cmake\debug\obj\armeabi-v7a
+-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=C:\Users\35196\Desktop\8_Car2022_Example_v1.1\app\build\intermediates\cmake\debug\obj\armeabi-v7a
+-DCMAKE_MAKE_PROGRAM=C:\Software\DevelopmentEnvironment\Android\SDK\cmake\3.10.2.4988404\bin\ninja.exe
 -DCMAKE_SYSTEM_NAME=Android
 -DCMAKE_SYSTEM_VERSION=24
--BC:\Users\86188\Desktop\8_Car2022_Example_v1.1\app\.cxx\cmake\debug\armeabi-v7a
+-BC:\Users\35196\Desktop\8_Car2022_Example_v1.1\app\.cxx\cmake\debug\armeabi-v7a
 -GNinja
 jvmArgs : 
 

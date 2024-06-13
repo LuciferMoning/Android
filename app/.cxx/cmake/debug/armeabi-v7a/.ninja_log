@@ -1,3 +1,6 @@
 # ninja log v5
-0	827	733140864	CMakeFiles/yolov5ncnn.dir/yolov5ncnn_jni.cpp.o	2e726145e1f712e2
-830	1019	733140864	C:/Users/86188/Desktop/8_Car2022_Example_v1.1/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libyolov5ncnn.so	7dfa47924d046bec
+1	7500	739873074	CMakeFiles/yolov5ncnn.dir/yolov5ncnn_jni.cpp.o	e38ed5c369bcaed6
+7504	7695	739873075	C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libyolov5ncnn.so	50f8b279bd8fe320
+2	187	739944615	build.ninja	e667221ac4820b6d
+4	1624	739944617	CMakeFiles/yolov5ncnn.dir/yolov5ncnn_jni.cpp.o	e38ed5c369bcaed6
+1624	1829	739944617	C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libyolov5ncnn.so	50f8b279bd8fe320
