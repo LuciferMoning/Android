@@ -1,7 +1,7 @@
 Executable : C:\Software\DevelopmentEnvironment\Android\SDK\cmake\3.10.2.4988404\bin\ninja.exe
 arguments : 
 -C
-C:\Users\35196\Desktop\8_Car2022_Example_v1.1\app\.cxx\cmake\debug\armeabi-v7a
+C:\SyncCode\AndroidCode\app\.cxx\cmake\debug\armeabi-v7a
 yolov5ncnn
 jvmArgs : 
 

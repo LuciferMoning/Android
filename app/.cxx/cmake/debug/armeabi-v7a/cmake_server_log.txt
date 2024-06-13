@@ -16,8 +16,8 @@ CMAKE SERVER: {
     "major": 1,
     "minor": 1
   },
-  "sourceDirectory": "C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/src/main/jniLibs",
-  "buildDirectory": "C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a",
+  "sourceDirectory": "C:/SyncCode/AndroidCode/app/src/main/jniLibs",
+  "buildDirectory": "C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a",
   "generator": "Ninja"
 }
 
@@ -37,7 +37,7 @@ CMAKE SERVER: {
   "type": "configure",
   "cacheArguments": [
     "",
-    "-DCMAKE_FIND_ROOT_PATH\u003dC:\\Users\\35196\\Desktop\\8_Car2022_Example_v1.1\\app\\.cxx\\cmake\\debug\\prefab\\armeabi-v7a\\prefab",
+    "-DCMAKE_FIND_ROOT_PATH\u003dC:\\SyncCode\\AndroidCode\\app\\.cxx\\cmake\\debug\\prefab\\armeabi-v7a\\prefab",
     "-DCMAKE_BUILD_TYPE\u003dDebug",
     "-DCMAKE_TOOLCHAIN_FILE\u003dC:\\Software\\DevelopmentEnvironment\\Android\\SDK\\ndk\\27.0.11902837\\build\\cmake\\android.toolchain.cmake",
     "-DANDROID_ABI\u003darmeabi-v7a",
@@ -46,8 +46,8 @@ CMAKE SERVER: {
     "-DCMAKE_ANDROID_ARCH_ABI\u003darmeabi-v7a",
     "-DCMAKE_ANDROID_NDK\u003dC:\\Software\\DevelopmentEnvironment\\Android\\SDK\\ndk\\27.0.11902837",
     "-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON",
-    "-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dC:\\Users\\35196\\Desktop\\8_Car2022_Example_v1.1\\app\\build\\intermediates\\cmake\\debug\\obj\\armeabi-v7a",
-    "-DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003dC:\\Users\\35196\\Desktop\\8_Car2022_Example_v1.1\\app\\build\\intermediates\\cmake\\debug\\obj\\armeabi-v7a",
+    "-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dC:\\SyncCode\\AndroidCode\\app\\build\\intermediates\\cmake\\debug\\obj\\armeabi-v7a",
+    "-DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003dC:\\SyncCode\\AndroidCode\\app\\build\\intermediates\\cmake\\debug\\obj\\armeabi-v7a",
     "-DCMAKE_MAKE_PROGRAM\u003dC:\\Software\\DevelopmentEnvironment\\Android\\SDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
     "-DCMAKE_SYSTEM_NAME\u003dAndroid",
     "-DCMAKE_SYSTEM_VERSION\u003d24"
@@ -98,7 +98,7 @@ CMAKE SERVER:
 
 CMAKE SERVER: [== "CMake Server" ==[
 
-CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
 
 CMAKE SERVER: ]== "CMake Server" ==]
 
@@ -109,8 +109,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):
   An old version of CMake is being used that cannot automatically detect
@@ -119,8 +119,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: 
 
@@ -154,7 +154,7 @@ CMAKE SERVER:
 
 CMAKE SERVER: [== "CMake Server" ==[
 
-CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
 
 CMAKE SERVER: ]== "CMake Server" ==]
 
@@ -165,8 +165,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):
   An old version of CMake is being used that cannot automatically detect
@@ -175,8 +175,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: 
 
@@ -210,7 +210,7 @@ CMAKE SERVER:
 
 CMAKE SERVER: [== "CMake Server" ==[
 
-CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
 
 CMAKE SERVER: ]== "CMake Server" ==]
 
@@ -221,8 +221,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):
   An old version of CMake is being used that cannot automatically detect
@@ -231,8 +231,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: 
 
@@ -246,7 +246,7 @@ CMAKE SERVER:
 
 CMAKE SERVER: [== "CMake Server" ==[
 
-CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
 
 CMAKE SERVER: ]== "CMake Server" ==]
 
@@ -257,8 +257,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):
   An old version of CMake is being used that cannot automatically detect
@@ -267,8 +267,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: 
 
@@ -282,7 +282,7 @@ CMAKE SERVER:
 
 CMAKE SERVER: [== "CMake Server" ==[
 
-CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
 
 CMAKE SERVER: ]== "CMake Server" ==]
 
@@ -293,8 +293,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):
   An old version of CMake is being used that cannot automatically detect
@@ -303,8 +303,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: 
 
@@ -338,7 +338,7 @@ CMAKE SERVER:
 
 CMAKE SERVER: [== "CMake Server" ==[
 
-CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
 
 CMAKE SERVER: ]== "CMake Server" ==]
 
@@ -349,8 +349,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):
   An old version of CMake is being used that cannot automatically detect
@@ -359,8 +359,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: 
 
@@ -394,7 +394,7 @@ CMAKE SERVER:
 
 CMAKE SERVER: [== "CMake Server" ==[
 
-CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
 
 CMAKE SERVER: ]== "CMake Server" ==]
 
@@ -405,8 +405,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):
   An old version of CMake is being used that cannot automatically detect
@@ -415,8 +415,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: 
 
@@ -450,7 +450,7 @@ CMAKE SERVER:
 
 CMAKE SERVER: [== "CMake Server" ==[
 
-CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
 
 CMAKE SERVER: ]== "CMake Server" ==]
 
@@ -461,8 +461,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):
   An old version of CMake is being used that cannot automatically detect
@@ -471,8 +471,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: 
 
@@ -486,7 +486,7 @@ CMAKE SERVER:
 
 CMAKE SERVER: [== "CMake Server" ==[
 
-CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
 
 CMAKE SERVER: ]== "CMake Server" ==]
 
@@ -497,8 +497,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):
   An old version of CMake is being used that cannot automatically detect
@@ -507,8 +507,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: 
 
@@ -522,7 +522,7 @@ CMAKE SERVER:
 
 CMAKE SERVER: [== "CMake Server" ==[
 
-CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
 
 CMAKE SERVER: ]== "CMake Server" ==]
 
@@ -533,8 +533,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):
   An old version of CMake is being used that cannot automatically detect
@@ -543,8 +543,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: 
 
@@ -558,7 +558,7 @@ CMAKE SERVER:
 
 CMAKE SERVER: [== "CMake Server" ==[
 
-CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
 
 CMAKE SERVER: ]== "CMake Server" ==]
 
@@ -569,8 +569,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):
   An old version of CMake is being used that cannot automatically detect
@@ -579,8 +579,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: 
 
@@ -604,7 +604,7 @@ CMAKE SERVER:
 
 CMAKE SERVER: [== "CMake Server" ==[
 
-CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
 
 CMAKE SERVER: ]== "CMake Server" ==]
 
@@ -615,8 +615,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):
   An old version of CMake is being used that cannot automatically detect
@@ -625,8 +625,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: 
 
@@ -640,7 +640,7 @@ CMAKE SERVER:
 
 CMAKE SERVER: [== "CMake Server" ==[
 
-CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
 
 CMAKE SERVER: ]== "CMake Server" ==]
 
@@ -651,8 +651,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):
   An old version of CMake is being used that cannot automatically detect
@@ -661,8 +661,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: 
 
@@ -676,7 +676,7 @@ CMAKE SERVER:
 
 CMAKE SERVER: [== "CMake Server" ==[
 
-CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
 
 CMAKE SERVER: ]== "CMake Server" ==]
 
@@ -687,8 +687,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):
   An old version of CMake is being used that cannot automatically detect
@@ -697,8 +697,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: 
 
@@ -722,7 +722,7 @@ CMAKE SERVER:
 
 CMAKE SERVER: [== "CMake Server" ==[
 
-CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
 
 CMAKE SERVER: ]== "CMake Server" ==]
 
@@ -733,8 +733,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):
   An old version of CMake is being used that cannot automatically detect
@@ -743,8 +743,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: 
 
@@ -788,7 +788,7 @@ CMAKE SERVER:
 
 CMAKE SERVER: [== "CMake Server" ==[
 
-CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
 
 CMAKE SERVER: ]== "CMake Server" ==]
 
@@ -799,8 +799,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):
   An old version of CMake is being used that cannot automatically detect
@@ -809,8 +809,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: 
 
@@ -844,7 +844,7 @@ CMAKE SERVER:
 
 CMAKE SERVER: [== "CMake Server" ==[
 
-CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):\n  An old version of CMake is being used that cannot automatically detect\n  compiler attributes.  Compiler identification is being bypassed.  Some\n  values may be wrong or missing.  Update to CMake 3.19 or newer to use\n  CMake's built-in compiler identification.\nCall Stack (most recent call first):\n  C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)\n  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)\n\n","title":"Warning","type":"message"}
 
 CMAKE SERVER: ]== "CMake Server" ==]
 
@@ -855,8 +855,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake:431 (message):
   An old version of CMake is being used that cannot automatically detect
@@ -865,8 +865,8 @@ CMAKE SERVER: CMake Warning at C:/Software/DevelopmentEnvironment/Android/SDK/nd
   CMake's built-in compiler identification.
 Call Stack (most recent call first):
   C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake:55 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
-  C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake:6 (include)
+  C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/CMakeTmp/CMakeLists.txt:2 (project)
 
 CMAKE SERVER: 
 
@@ -973,7 +973,7 @@ CMAKE SERVER:
 
 CMAKE SERVER: [== "CMake Server" ==[
 
-CMAKE SERVER: {"buildFiles":[{"isCMake":true,"isTemporary":false,"sources":["C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineSystem.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystem.cmake.in","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Initialize.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCCompiler.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompiler.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine-C.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android/Determine-Compiler.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeFindBinUtils.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-FindBinUtils.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompiler.cmake.in","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCXXCompiler.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompiler.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine-CXX.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android/Determine-Compiler.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeFindBinUtils.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-FindBinUtils.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompiler.cmake.in","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeGenericSystem.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Linux.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/UnixPaths.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCInformation.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GNU.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-C.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCCompiler.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCompilerCommon.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompilerABI.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeParseImplicitLinkInfo.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompilerABI.c","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompileFeatures.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Internal/FeatureTesting.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C-FeatureTests.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C-FeatureTests.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C-FeatureTests.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompiler.cmake.in","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXInformation.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-CXX.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCXXCompiler.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCompilerCommon.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompilerABI.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeParseImplicitLinkInfo.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompileFeatures.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Internal/FeatureTesting.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompiler.cmake.in","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindOpenMP.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeParseImplicitLinkInfo.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageMessage.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageMessage.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindThreads.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CheckLibraryExists.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CheckSymbolExists.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CheckIncludeFile.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CheckIncludeFile.c.in","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeConfigurableFile.in","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageMessage.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindVulkan.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageMessage.cmake"]},{"isCMake":false,"isTemporary":false,"sources":["CMakeLists.txt","C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/abis.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/platforms.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/compiler_id.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake","armeabi-v7a/lib/cmake/ncnn/ncnnConfig.cmake","armeabi-v7a/lib/cmake/glslang/glslang-config-version.cmake","armeabi-v7a/lib/cmake/glslang/glslang-config.cmake","armeabi-v7a/lib/cmake/glslang/glslang-targets.cmake","armeabi-v7a/lib/cmake/glslang/glslang-targets-release.cmake","armeabi-v7a/lib/cmake/ncnn/ncnn.cmake","armeabi-v7a/lib/cmake/ncnn/ncnn-release.cmake"]},{"isCMake":false,"isTemporary":true,"sources":["../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeCCompiler.cmake","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeCXXCompiler.cmake","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/feature_tests.c","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/feature_tests.c","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/feature_tests.c","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeCCompiler.cmake","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/feature_tests.cxx","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/feature_tests.cxx","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/feature_tests.cxx","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/feature_tests.cxx","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeCXXCompiler.cmake","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/FindOpenMP/OpenMPTryFlag.c","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/FindOpenMP/OpenMPCheckVersion.c","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/FindOpenMP/OpenMPCheckVersion.cpp"]}],"cmakeRootDirectory":"C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10","cookie":"","inReplyTo":"cmakeInputs","sourceDirectory":"C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/src/main/jniLibs","type":"reply"}
+CMAKE SERVER: {"buildFiles":[{"isCMake":true,"isTemporary":false,"sources":["C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineSystem.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystem.cmake.in","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Initialize.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCCompiler.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompiler.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine-C.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android/Determine-Compiler.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeFindBinUtils.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-FindBinUtils.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompiler.cmake.in","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCXXCompiler.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompiler.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine-CXX.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android/Determine-Compiler.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeFindBinUtils.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-FindBinUtils.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompiler.cmake.in","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeGenericSystem.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Linux.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/UnixPaths.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCInformation.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GNU.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-C.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCCompiler.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCompilerCommon.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompilerABI.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeParseImplicitLinkInfo.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompilerABI.c","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompileFeatures.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Internal/FeatureTesting.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C-FeatureTests.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C-FeatureTests.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C-FeatureTests.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompiler.cmake.in","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXInformation.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-CXX.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCXXCompiler.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCompilerCommon.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompilerABI.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeParseImplicitLinkInfo.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompileFeatures.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Internal/FeatureTesting.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompiler.cmake.in","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindOpenMP.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeParseImplicitLinkInfo.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageMessage.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageMessage.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindThreads.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CheckLibraryExists.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CheckSymbolExists.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CheckIncludeFile.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CheckIncludeFile.c.in","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeConfigurableFile.in","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageMessage.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindVulkan.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageMessage.cmake"]},{"isCMake":false,"isTemporary":false,"sources":["CMakeLists.txt","C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android-legacy.toolchain.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/abis.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/platforms.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/compiler_id.cmake","C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/build/cmake/android.toolchain.cmake","armeabi-v7a/lib/cmake/ncnn/ncnnConfig.cmake","armeabi-v7a/lib/cmake/glslang/glslang-config-version.cmake","armeabi-v7a/lib/cmake/glslang/glslang-config.cmake","armeabi-v7a/lib/cmake/glslang/glslang-targets.cmake","armeabi-v7a/lib/cmake/glslang/glslang-targets-release.cmake","armeabi-v7a/lib/cmake/ncnn/ncnn.cmake","armeabi-v7a/lib/cmake/ncnn/ncnn-release.cmake"]},{"isCMake":false,"isTemporary":true,"sources":["../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeCCompiler.cmake","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeCXXCompiler.cmake","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/feature_tests.c","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/feature_tests.c","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/feature_tests.c","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeCCompiler.cmake","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/feature_tests.cxx","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/feature_tests.cxx","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/feature_tests.cxx","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/feature_tests.cxx","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeCXXCompiler.cmake","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/FindOpenMP/OpenMPTryFlag.c","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/FindOpenMP/OpenMPCheckVersion.c","../../../.cxx/cmake/debug/armeabi-v7a/CMakeFiles/FindOpenMP/OpenMPCheckVersion.cpp"]}],"cmakeRootDirectory":"C:/Software/DevelopmentEnvironment/Android/SDK/cmake/3.10.2.4988404/share/cmake-3.10","cookie":"","inReplyTo":"cmakeInputs","sourceDirectory":"C:/SyncCode/AndroidCode/app/src/main/jniLibs","type":"reply"}
 
 CMAKE SERVER: ]== "CMake Server" ==]
 
@@ -987,7 +987,7 @@ CMAKE SERVER:
 
 CMAKE SERVER: [== "CMake Server" ==[
 
-CMAKE SERVER: {"configurations":[{"name":"Debug","projects":[{"buildDirectory":"C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a","name":"yolov5ncnn","sourceDirectory":"C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/src/main/jniLibs","targets":[{"artifacts":["C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libyolov5ncnn.so"],"buildDirectory":"C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/armeabi-v7a","fileGroups":[{"compileFlags":"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -fno-rtti -fno-exceptions","defines":["yolov5ncnn_EXPORTS"],"includePath":[{"isSystem":true,"path":"C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/src/main/jniLibs/armeabi-v7a/include/ncnn"}],"isGenerated":false,"language":"CXX","sources":["yolov5ncnn_jni.cpp"]}],"fullName":"libyolov5ncnn.so","linkFlags":"-static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments","linkLibraries":"C:\\Users\\35196\\Desktop\\8_Car2022_Example_v1.1\\app\\src\\main\\jniLibs\\armeabi-v7a\\lib\\libncnn.a -ljnigraphics -fopenmp -static-openmp -Wl,-wrap,__kmp_affinity_determine_capable C:\\Software\\DevelopmentEnvironment\\Android\\SDK\\ndk\\27.0.11902837\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\arm-linux-androideabi\\24\\libvulkan.so C:\\Users\\35196\\Desktop\\8_Car2022_Example_v1.1\\app\\src\\main\\jniLibs\\armeabi-v7a\\lib\\libglslang.a C:\\Users\\35196\\Desktop\\8_Car2022_Example_v1.1\\app\\src\\main\\jniLibs\\armeabi-v7a\\lib\\libSPIRV.a C:\\Users\\35196\\Desktop\\8_Car2022_Example_v1.1\\app\\src\\main\\jniLibs\\armeabi-v7a\\lib\\libMachineIndependent.a C:\\Users\\35196\\Desktop\\8_Car2022_Example_v1.1\\app\\src\\main\\jniLibs\\armeabi-v7a\\lib\\libOGLCompiler.a C:\\Users\\35196\\Desktop\\8_Car2022_Example_v1.1\\app\\src\\main\\jniLibs\\armeabi-v7a\\lib\\libOSDependent.a -pthread C:\\Users\\35196\\Desktop\\8_Car2022_Example_v1.1\\app\\src\\main\\jniLibs\\armeabi-v7a\\lib\\libGenericCodeGen.a -landroid -ljnigraphics -llog -latomic -lm","linkerLanguage":"CXX","name":"yolov5ncnn","sourceDirectory":"C:/Users/35196/Desktop/8_Car2022_Example_v1.1/app/src/main/jniLibs","sysroot":"C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/toolchains/llvm/prebuilt/windows-x86_64/sysroot","type":"SHARED_LIBRARY"}]}]}],"cookie":"","inReplyTo":"codemodel","type":"reply"}
+CMAKE SERVER: {"configurations":[{"name":"Debug","projects":[{"buildDirectory":"C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a","name":"yolov5ncnn","sourceDirectory":"C:/SyncCode/AndroidCode/app/src/main/jniLibs","targets":[{"artifacts":["C:/SyncCode/AndroidCode/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libyolov5ncnn.so"],"buildDirectory":"C:/SyncCode/AndroidCode/app/.cxx/cmake/debug/armeabi-v7a","fileGroups":[{"compileFlags":"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -fno-rtti -fno-exceptions","defines":["yolov5ncnn_EXPORTS"],"includePath":[{"isSystem":true,"path":"C:/SyncCode/AndroidCode/app/src/main/jniLibs/armeabi-v7a/include/ncnn"}],"isGenerated":false,"language":"CXX","sources":["yolov5ncnn_jni.cpp"]}],"fullName":"libyolov5ncnn.so","linkFlags":"-static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments","linkLibraries":"C:\\SyncCode\\AndroidCode\\app\\src\\main\\jniLibs\\armeabi-v7a\\lib\\libncnn.a -ljnigraphics -fopenmp -static-openmp -Wl,-wrap,__kmp_affinity_determine_capable C:\\Software\\DevelopmentEnvironment\\Android\\SDK\\ndk\\27.0.11902837\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\arm-linux-androideabi\\24\\libvulkan.so C:\\SyncCode\\AndroidCode\\app\\src\\main\\jniLibs\\armeabi-v7a\\lib\\libglslang.a C:\\SyncCode\\AndroidCode\\app\\src\\main\\jniLibs\\armeabi-v7a\\lib\\libSPIRV.a C:\\SyncCode\\AndroidCode\\app\\src\\main\\jniLibs\\armeabi-v7a\\lib\\libMachineIndependent.a C:\\SyncCode\\AndroidCode\\app\\src\\main\\jniLibs\\armeabi-v7a\\lib\\libOGLCompiler.a C:\\SyncCode\\AndroidCode\\app\\src\\main\\jniLibs\\armeabi-v7a\\lib\\libOSDependent.a -pthread C:\\SyncCode\\AndroidCode\\app\\src\\main\\jniLibs\\armeabi-v7a\\lib\\libGenericCodeGen.a -landroid -ljnigraphics -llog -latomic -lm","linkerLanguage":"CXX","name":"yolov5ncnn","sourceDirectory":"C:/SyncCode/AndroidCode/app/src/main/jniLibs","sysroot":"C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/toolchains/llvm/prebuilt/windows-x86_64/sysroot","type":"SHARED_LIBRARY"}]}]}],"cookie":"","inReplyTo":"codemodel","type":"reply"}
 
 CMAKE SERVER: ]== "CMake Server" ==]
 
