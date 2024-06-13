@@ -1,0 +1,52 @@
+{
+  "stringTable": {
+    "0": "G:/xuexi/Android/Android/8_Car2022_Example_v1.1 (1)/8_Car2022_Example_v1.1 (1)/8_Car2022_Example_v1.1/app/.cxx/cmake/release/arm64-v8a",
+    "1": "--target=aarch64-none-linux-android24 --sysroot=D:/android/Android/Sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dyolov5ncnn_EXPORTS -isystem \"G:/xuexi/Android/Android/8_Car2022_Example_v1.1 (1)/8_Car2022_Example_v1.1 (1)/8_Car2022_Example_v1.1/app/src/main/jniLibs/arm64-v8a/include/ncnn\" -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -O3 -DNDEBUG -fPIC -fno-rtti -fno-exceptions"
+  },
+  "buildFiles": [
+    "G:\\xuexi\\Android\\Android\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1\\app\\src\\main\\jniLibs\\CMakeLists.txt",
+    "D:\\android\\Android\\Sdk\\ndk\\25.2.9519653\\build\\cmake\\android.toolchain.cmake",
+    "D:\\android\\Android\\Sdk\\ndk\\25.2.9519653\\build\\cmake\\android-legacy.toolchain.cmake",
+    "D:\\android\\Android\\Sdk\\ndk\\25.2.9519653\\build\\cmake\\platforms.cmake",
+    "D:\\android\\Android\\Sdk\\ndk\\25.2.9519653\\build\\cmake\\compiler_id.cmake",
+    "G:\\xuexi\\Android\\Android\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1\\app\\src\\main\\jniLibs\\arm64-v8a\\lib\\cmake\\ncnn\\ncnnConfig.cmake",
+    "G:\\xuexi\\Android\\Android\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1\\app\\src\\main\\jniLibs\\arm64-v8a\\lib\\cmake\\glslang\\glslang-config-version.cmake",
+    "G:\\xuexi\\Android\\Android\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1\\app\\src\\main\\jniLibs\\arm64-v8a\\lib\\cmake\\glslang\\glslang-config.cmake",
+    "G:\\xuexi\\Android\\Android\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1\\app\\src\\main\\jniLibs\\arm64-v8a\\lib\\cmake\\glslang\\glslang-targets.cmake",
+    "G:\\xuexi\\Android\\Android\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1\\app\\src\\main\\jniLibs\\arm64-v8a\\lib\\cmake\\glslang\\glslang-targets-release.cmake",
+    "G:\\xuexi\\Android\\Android\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1\\app\\src\\main\\jniLibs\\arm64-v8a\\lib\\cmake\\ncnn\\ncnn.cmake",
+    "G:\\xuexi\\Android\\Android\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1\\app\\src\\main\\jniLibs\\arm64-v8a\\lib\\cmake\\ncnn\\ncnn-release.cmake"
+  ],
+  "cleanCommands": [
+    "D:\\android\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"G:\\xuexi\\Android\\Android\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1\\app\\.cxx\\cmake\\release\\arm64-v8a\" clean"
+  ],
+  "buildTargetsCommand": "D:\\android\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe  -C \"G:\\xuexi\\Android\\Android\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1\\app\\.cxx\\cmake\\release\\arm64-v8a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "yolov5ncnn-Release-arm64-v8a": {
+      "buildCommand": "D:\\android\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"G:\\xuexi\\Android\\Android\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1\\app\\.cxx\\cmake\\release\\arm64-v8a\" yolov5ncnn",
+      "buildType": "release",
+      "toolchain": "1707465575",
+      "abi": "arm64-v8a",
+      "artifactName": "yolov5ncnn",
+      "files": [
+        {
+          "src": "G:\\xuexi\\Android\\Android\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1\\app\\src\\main\\jniLibs\\yolov5ncnn_jni.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [],
+      "output": "G:\\xuexi\\Android\\Android\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1\\app\\build\\intermediates\\cmake\\release\\obj\\arm64-v8a\\libyolov5ncnn.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {
+    "1707465575": {
+      "cppCompilerExecutable": "D:\\android\\Android\\Sdk\\ndk\\25.2.9519653\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

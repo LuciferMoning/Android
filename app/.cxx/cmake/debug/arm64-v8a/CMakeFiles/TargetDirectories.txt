@@ -1,0 +1,3 @@
+G:/xuexi/Android/Android/8_Car2022_Example_v1.1 (1)/8_Car2022_Example_v1.1 (1)/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/arm64-v8a/CMakeFiles/yolov5ncnn.dir
+G:/xuexi/Android/Android/8_Car2022_Example_v1.1 (1)/8_Car2022_Example_v1.1 (1)/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/arm64-v8a/CMakeFiles/edit_cache.dir
+G:/xuexi/Android/Android/8_Car2022_Example_v1.1 (1)/8_Car2022_Example_v1.1 (1)/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/arm64-v8a/CMakeFiles/rebuild_cache.dir

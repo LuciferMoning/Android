@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/showList"
+    android:layout_width="500dp"
+    android:layout_height="288dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="500dp"
+        android:layout_height="288dp"
+        android:background="#fdfdfd"
+        android:gravity="center"
+
+
+        android:orientation="vertical"
+        android:paddingLeft="21dp"
+        android:paddingTop="20dp"
+        android:paddingRight="21dp"
+        android:paddingBottom="30dp"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5.5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tips"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:shadowColor="@color/blue"
+                android:gravity="center"
+                android:text="@string/editChinese"
+                tools:ignore="NestedWeights" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5">
+            <car.bkrc.com.car2022.Utils.OtherUtil.ClearEditText
+                android:id="@+id/edit"
+                android:gravity="center"
+                android:hint="请在此输入自定义文字内容！"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/left_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_back_ground"
+                android:text="通过红外发送" />
+
+            <Button
+                android:id="@+id/right_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_back_ground"
+                android:text="通过ZigBee发送" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,4 @@
+# ninja log v5
+1	1228	712045434	CMakeFiles/yolov5ncnn.dir/yolov5ncnn_jni.cpp.o	6a6d24a62e5b727c
+1231	1621	712045434	G:/xuexi/Android/Android/8_Car2022_Example_v1.1 (1)/8_Car2022_Example_v1.1 (1)/8_Car2022_Example_v1.1/app/build/intermediates/cmake/debug/obj/arm64-v8a/libyolov5ncnn.so	b1de353b4d6005ae
+0	18	0	clean	d5362f68e2273fd
