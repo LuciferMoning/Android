@@ -6,8 +6,8 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="16"
-8-->C:\SyncCode\AndroidCode\open330\src\main\AndroidManifest.xml
+8-->C:\Users\86188\Desktop\8_Car2022_Example_v1.1\open330\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="28" />
-9-->C:\SyncCode\AndroidCode\open330\src\main\AndroidManifest.xml
+9-->C:\Users\86188\Desktop\8_Car2022_Example_v1.1\open330\src\main\AndroidManifest.xml
 10
 11</manifest>
