@@ -1,7 +1,0 @@
-[
-{
-  "directory": "G:/xuexi/Android/Android/8_Car2022_Example_v1.1 (1)/8_Car2022_Example_v1.1 (1)/8_Car2022_Example_v1.1/app/.cxx/cmake/debug/arm64-v8a",
-  "command": "D:\\android\\Android\\Sdk\\ndk\\25.2.9519653\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android24 --sysroot=D:/android/Android/Sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dyolov5ncnn_EXPORTS -isystem \"G:/xuexi/Android/Android/8_Car2022_Example_v1.1 (1)/8_Car2022_Example_v1.1 (1)/8_Car2022_Example_v1.1/app/src/main/jniLibs/arm64-v8a/include/ncnn\"  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC   -fno-rtti -fno-exceptions -o CMakeFiles\\yolov5ncnn.dir\\yolov5ncnn_jni.cpp.o -c \"G:\\xuexi\\Android\\Android\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1\\app\\src\\main\\jniLibs\\yolov5ncnn_jni.cpp\"",
-  "file": "G:\\xuexi\\Android\\Android\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1 (1)\\8_Car2022_Example_v1.1\\app\\src\\main\\jniLibs\\yolov5ncnn_jni.cpp"
-}
-]
