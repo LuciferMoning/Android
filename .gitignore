@@ -3,6 +3,8 @@
 # 忽略编译输出
 build/
 app/build/
+app/.cxx/
+open330/build/
 out/
 release/
 
