@@ -171,7 +171,7 @@ public class PlateRecognition {
                 return;
             }
             FirstActivity.Connect_Transport.TFT_LCD(0xAA, 0x51, 0x00, 0x00, 0x00);
-            FirstActivity.Connect_Transport.fanyeshibie('B');
+            FirstActivity.Connect_Transport.TFT_LicensePlate_PageDown('B');
             rightFragment1.Plate_ShiBie2();
             cns++;
             System.out.println("车牌识别次数"+cns);

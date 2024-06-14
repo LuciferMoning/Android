@@ -115,7 +115,7 @@ public class PlantMainActivity {
 //                    num = 0;
                     break;
                 case 333:
-                    FirstActivity.Connect_Transport.fanyeshibie('B');
+                    FirstActivity.Connect_Transport.TFT_LicensePlate_PageDown('B');
                     FirstActivity.Connect_Transport.TFT_LCD(0x08, 0x10, 0x02, 0x00, 0x00);
                     for(int j=0; j<10; j++)
                     {

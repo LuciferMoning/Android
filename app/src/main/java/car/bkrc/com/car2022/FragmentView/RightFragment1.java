@@ -194,7 +194,7 @@ public class RightFragment1 extends Fragment {
                                 }
                             } else {
                                 // 显示数据
-                                stateTV.setText(mByte[2] + "");              // 运行状态
+                                stateTV.setText(mByte[2] + "");           // 运行状态
                                 psStatusTV.setText(psStatus + "");        // 光敏电阻
                                 codedDiskTV.setText(codedDisk + "");      // 码盘
                                 lightTV.setText(light + " lx");           // 光照度
@@ -217,19 +217,19 @@ public class RightFragment1 extends Fragment {
                 byte[] mByte = (byte[]) msg.obj;
                 if(mByte[2] == 0x02){//二维码识别
 
-                    connectTransport.receive( 2);
+                    connectTransport.receiveReturn( 2);
                     connectTransport.yanchi(1000);
                     qr(5);
                     qr(5);
 
                 }else if(mByte[2] == 0x04){//车牌识别
 
-                    connectTransport.receive( 2);
+                    connectTransport.receiveReturn( 2);
                     plan(mByte[3]);
 
                 }else if(mByte[2] == 0x03){//信号灯识别
 
-                    connectTransport.receive( 2);
+                    connectTransport.receiveReturn( 2);
                     Connect_Transport.yanchi(1000);
                     trafficLightDis(bitmap);
                     iniColor(bitmap);
@@ -249,31 +249,31 @@ public class RightFragment1 extends Fragment {
                                 Connect_Transport.traffic_control(0x14, 0x02, inColor);
                                 break;
                         }
-                        connectTransport.receive_End();
+                        connectTransport.receiveEnd(0x02);
                     }
                 }else if(mByte[2] == 0x05){//行人戴口罩
-                    connectTransport.receive( 2);
+                    connectTransport.receiveReturn( 2);
                     position();
                 }else if(mByte[2] == 0x06){//交通标志物
-                    connectTransport.receive( 2);
+                    connectTransport.receiveReturn( 2);
                     Traffic_Sign();
                     jtbz();
                 }else if(mByte[2] == 0x07){//车型识别
-                    connectTransport.receive( 2);
+                    connectTransport.receiveReturn( 2);
                     shapCar();
                 }else if(mByte[2] == 0x08){//图像识别
-                    connectTransport.receive( 2);
+                    connectTransport.receiveReturn( 2);
                     TuxiangShibie();
                 }else if(mByte[2] == 0x09){//多识别
-                    connectTransport.receive( 2);
+                    connectTransport.receiveReturn( 2);
                     tft();
                 }
                 else if(mByte[2] == 0x0A){//汉字识别
-                    connectTransport.receive( 2);
+                    connectTransport.receiveReturn( 2);
                     text();
-                    connectTransport.receive( 2);
+                    connectTransport.receiveReturn( 2);
                 }else if(mByte[2] == 0x11){ //打开道闸
-                    connectTransport.receive( 2);
+                    connectTransport.receiveReturn( 2);
 
                     Connect_Transport.gate(0x10, planss[0], planss[1], planss[2]);
                     Connect_Transport.yanchi(500);
@@ -282,7 +282,7 @@ public class RightFragment1 extends Fragment {
                     Connect_Transport.gate(0x01, 0x01, 0x00, 0x00);
 
                 }else if(mByte[2] == 0x10){ //立体显示标志物
-                    connectTransport.receive( 2);
+                    connectTransport.receiveReturn( 2);
                     String str = "A"+ju_num+"B"+lin_num+"C"+sj_num+""+cns2+""+5+""+arr;
                     toastUtil.ShowToast(str);
 
@@ -292,25 +292,21 @@ public class RightFragment1 extends Fragment {
                         try {
                             byte[] bytes = str.getBytes("gbk");
                             System.out.println(Arrays.toString(bytes));
-                            connectTransport.zigbeeSendData(bytes, bytes.length);
+                            connectTransport.Rotate_SendData_Zigbee(bytes, bytes.length);
                         } catch (UnsupportedEncodingException e) {
                             e.printStackTrace();
                         }
                     }
                 }
                 else if(mByte[2] == 0x12){//报警台
-                    connectTransport.receive( 2);
+                    int[] infrared_Tx = {0x03, 0x05, 0x14, 0x45, 0xDE, 0x92};
+                    connectTransport.receiveReturn( 0x02);
                     connectTransport.yanchi(500);
-                    connectTransport.infrared((byte) 0x03, (byte) 0x05,
-                            (byte) 0x14, (byte) 0x45, (byte) 0xDE,
-                            (byte) 0x92);
+                    connectTransport.infrared_Send(infrared_Tx);
                     connectTransport.yanchi(500);
                 }
                 else if(mByte[2] == 0x13){//发送八位数据
-                    connectTransport.receive( 2);
-//                    Connect_Transport.sendData();
-
-
+                    connectTransport.receiveReturn( 2);
                 }
 
             }
@@ -713,7 +709,7 @@ public class RightFragment1 extends Fragment {
 //                        String str1 = "显示标志物";
 //                        byte[] bytes = str1.getBytes("gbk");
 //                        System.out.println(Arrays.toString(bytes));
-//                        connectTransport.zigbeeSendData(bytes,bytes.length);
+//                        connectTransport.Rotate_Send_Zigbee(bytes,bytes.length);
 //                    } catch (UnsupportedEncodingException e) {
 //                        e.printStackTrace();
 //                    }
@@ -775,7 +771,10 @@ public class RightFragment1 extends Fragment {
         showObjects(objects);
         toastUtil.ShowToast("汽车有"+arr1[0]+"辆,"+"自行车有"+arr1[1]+"辆,"+"货车有"+arr1[2]+"辆,"+"，摩托车有"+arr1[3]+"辆,");
     }
-    // 交通标志物
+
+    /**
+     * 识别交通标志物
+     */
     private void Traffic_Sign() {
         arr2=new int[9];
         boolean ret_init = yolov5ncnn.Init1(getContext().getAssets());

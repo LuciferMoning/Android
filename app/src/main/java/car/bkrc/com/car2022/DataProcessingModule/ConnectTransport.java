@@ -176,8 +176,6 @@ public class ConnectTransport {
 
     }
 
-
-
     public void send() {
         CHECKSUM = (short) ((MAJOR + FIRST + SECOND + THRID) % 256);
         // 发送数据字节数组
@@ -227,34 +225,29 @@ public class ConnectTransport {
 
             }
     }
-//    private void DataLoad(byte[] data) {
-//        //假定有个全局数据 SenData[]数组
-//
-//        SenData[0]=(byte) 0x55;
-//        SenData[1]=(byte) 0xAA;
-//        SenData[3]=(byte);
-//        SenData[4]=(byte);
-//        SenData[5]=(byte);
-//        SenData[6]=(byte);
-//        SenData[7]=(byte);
-//        for()                           //填入数据项
-//
-//        SenData[data.length+8]=(byte);              //校验值计算
-//        SenData[data.length+9]=(byte)0xAA;
-//        SenData[data.length+10]=(byte)0x55;
-//        SenData[data.length+11]=(byte)(data.length+11);   //计算数据长度
-//
-//    }
 
-    private void sendSecend() {
-        CHECKSUM = (short) ((MAJOR + FIRST + SECOND + THRID) % 256);
+    /**
+     * 计算校验和
+     *
+     * @param Count_data    需要计算的数组
+     * @return              返回校验和
+     */
+    private int ChecksumCalculations(int Count_data[]){
 
-        // 发送数据字节数组
+        return ((Count_data[2] + Count_data[3] + Count_data[4] + Count_data[5])%256);
+    }
 
-        final byte[] sbyte = {0x55, (byte) TYPE2, (byte) MAJOR, (byte) FIRST, (byte) SECOND, (byte) THRID, (byte) CHECKSUM, (byte) 0xBB};
+    /**
+     *  发送wifi数据(八位)
+     *
+     * @param Tx_data   发送数据
+     */
+    private void Send_Data(int Tx_data[]){
 
-        //
+        Tx_data[6] = ChecksumCalculations(Tx_data);
+        byte Tx_Buff[] = {(byte)Tx_data[0], (byte)Tx_data[1], (byte)Tx_data[2], (byte)Tx_data[3], (byte)Tx_data[4], (byte)Tx_data[5], (byte)Tx_data[6], (byte)Tx_data[7]};
 
+        Log.e(TAG, "SendData: " + Tx_Buff);
         if (XcApplication.isserial == XcApplication.Mode.SOCKET) {
             XcApplication.executorServicetor.execute(new Runnable() {
                 @Override
@@ -262,7 +255,7 @@ public class ConnectTransport {
                     // TODO Auto-generated method stub
                     try {
                         if (socket != null && !socket.isClosed()) {
-                            bOutputStream.write(sbyte, 0, sbyte.length);
+                            bOutputStream.write(Tx_Buff, 0, Tx_Buff.length);
                             bOutputStream.flush();
                         } else {
                             Message msg = new Message();
@@ -280,63 +273,22 @@ public class ConnectTransport {
                 @Override
                 public void run() {
                     try {
-                        SerialOutputStream.write(sbyte, 0, sbyte.length);
+                        SerialOutputStream.write(Tx_Buff, 0, Tx_Buff.length);
                         SerialOutputStream.flush();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
                 }
             });
-        } else if (XcApplication.isserial == XcApplication.Mode.USB_SERIAL)
+        }
+        else if (XcApplication.isserial == XcApplication.Mode.USB_SERIAL)
             try {
-                FirstActivity.sPort.write(sbyte, 5000);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-    }
-    private void sendzhu() {
-
-        short check = (short)((TYPE + MAJOR + FIRST + SECOND ) % 256);
-
-        final byte[] sbyte = {0x54,(byte) TYPE3,(byte) determine, (byte) TYPE, (byte) MAJOR, (byte) FIRST, (byte) SECOND, (byte) THRID, (byte) CHECKSUM, 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,(byte)check,(byte) 0xBB};
-
-        Log.e(TAG, "send: " + sbyte);
-        if (XcApplication.isserial == XcApplication.Mode.SOCKET) {
-            XcApplication.executorServicetor.execute(new Runnable() {
-                @Override
-                public void run() {
-                    // TODO Auto-generated method stub
-                    try {
-                        if (socket != null && !socket.isClosed()) {
-                            bOutputStream.write(sbyte, 0, sbyte.length);
-                            bOutputStream.flush();
-                        }
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            });
-        } else if (XcApplication.isserial == XcApplication.Mode.SERIAL) {
-
-            XcApplication.executorServicetor.execute(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        SerialOutputStream.write(sbyte, 0, sbyte.length);
-                        SerialOutputStream.flush();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            });
-        } else if (XcApplication.isserial == XcApplication.Mode.USB_SERIAL)
-            try {
-                FirstActivity.sPort.write(sbyte, 5000);
+                FirstActivity.sPort.write(Tx_Buff, 5000);
             } catch (IOException e) {
                 e.printStackTrace();
             } catch (NullPointerException ignored) {
 
-            }
+        }
     }
 
     public void send_voice(final byte[] textbyte) {
@@ -382,7 +334,7 @@ public class ConnectTransport {
             }
     }
 
-    public void sendData(byte[] Tx_data, byte CMD) {
+    public void Rotate_SendData_Infrared(byte[] Tx_data, byte CMD) {
         byte[] Tx_buf = new byte[8];
         byte Tx_len = 0;
         int len = Tx_data.length;
@@ -412,275 +364,168 @@ public class ConnectTransport {
 
     }
 
-    public void Send_over(){
-        byte temp = (byte) TYPE;
-        TYPE = 0x0F;
-        MAJOR = 0x10;
-        SECOND = 0x00;
-        THRID = 0x00;
-        send();
-        TYPE = temp;
-    }
-
-
-    // 前进
+    /**
+     * 小车前进
+     *
+     * @param sp_n  速度
+     * @param en_n  码盘
+     */
     public void go(int sp_n, int en_n) {
-        MAJOR = 0x02;
-        FIRST = (byte) (sp_n & 0xFF);
-        SECOND = (byte) (en_n & 0xff);
-        THRID = (byte) (en_n >> 8);
-        send();
+
+        int Tx_data[] = {0x55, 0xAA, 0x02, (sp_n & 0xFF), (en_n & 0xff), (en_n >> 8), 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
-    // 后退
+    /**
+     * 小车后退
+     *
+     * @param sp_n  速度
+     * @param en_n  码盘
+     */
     public void back(int sp_n, int en_n) {
-        MAJOR = 0x03;
-        FIRST = (byte) (sp_n & 0xFF);
-        SECOND = (byte) (en_n & 0xff);
-        THRID = (byte) (en_n >> 8);
-        send();
+
+        int Tx_data[] = {0x55, 0xAA, 0x03, (sp_n & 0xFF), (en_n & 0xff), (en_n >> 8), 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
 
-    //左转
+    /**
+     * 小车左转
+     *
+     * @param sp_n  速度
+     */
     public void left(int sp_n) {
-        MAJOR = 0x04;
-        FIRST = (byte) (sp_n & 0xFF);
-        SECOND = (byte) 0x00;
-        THRID = (byte) 0x00;
-        send();
+
+        int Tx_data[] = {0x55, 0xAA, 0x04, (sp_n & 0xFF), 0x00, 0x00, 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
-
-    // 右转
+    /**
+     * 小车右转
+     *
+     * @param sp_n  速度
+     */
     public void right(int sp_n) {
-        MAJOR = 0x05;
-        FIRST = (byte) (sp_n & 0xFF);
-        SECOND = (byte) 0x00;
-        THRID = (byte) 0x00;
-        send();
+
+        int Tx_data[] = {0x55, 0xAA, 0x05, (sp_n & 0xFF), 0x00, 0x00, 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
-    // 停车
+    /**
+     * 小车停止
+     */
     public void stop() {
-        MAJOR = 0x01;
-        FIRST = 0x00;
-        SECOND = 0x00;
-        THRID = 0x00;
-        send();
+
+        int Tx_data[] = {0x55, 0xAA, 0x01, 0x00, 0x00, 0x00, 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
-    // 程序自动执行
+    /**
+     * 程序自动执行
+     */
     public void autoDrive() {
-        MAJOR = 0xA0;
-        FIRST = 0x00;
-        SECOND = 0x00;
-        THRID = 0x00;
-        send();
+
+        // 启动函数 Send_Data自动计算校验和
+        int[] Tx_data = {0x55, 0xAA, 0xA0, 0x00, 0x00, 0x00, 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
-
-    // 循迹
+    /**
+     * 主车循迹
+     *
+     * @param sp_n 速度
+     */
     public void line(int sp_n) {  //寻迹
-        MAJOR = 0x06;
-        FIRST = (byte) (sp_n & 0xFF);
-        SECOND = 0x00;
-        THRID = 0x00;
-        send();
+
+        int Tx_data[] = {0x55, 0xAA, 0x06, (sp_n & 0xFF), 0x00, 0x00, 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
-    //清除码盘值
+    /**
+     * 主车码盘清空
+     */
     public void clear() {
-        MAJOR = 0x07;
-        FIRST = 0x00;
-        SECOND = 0x00;
-        THRID = 0x00;
-        send();
+
+        int Tx_data[] = {0x55, 0xAA, 0x07, 0x00, 0x00, 0x00, 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
-    //TFT车牌翻页
-    public void fanyeshibie(char Device)
+    /**
+     * TFT车牌向下翻页
+     *
+     * @param Device    TFT型号
+     */
+    public void TFT_LicensePlate_PageDown(char Device)
     {
-            //         TFT_PageDown[8]={0x55,0x0B,0x10,0x02,0x00,0x00,0x12,0xBB};		// TFT显示器 下翻页
-            //        MAJOR = 0xA0;//A2
+        int Model = 0x00;
 
-            ////        FIRST = 0;
-        if(Device == 'A') TYPE = 0X0B;
-        else if(Device == 'B') TYPE = 0X08;
-        else if(Device == 'C') TYPE = 0X12;
-        System.out.println("OK");
-        MAJOR = 0x01;
-        FIRST = 0x02;
-        SECOND = 0x00;
-        THRID = 0x00;
-        CHECKSUM = 0x00;
-        send();
+        if(Device == 'A') Model = 0X0B;
+        else if(Device == 'B') Model = 0X08;
+        else if(Device == 'C') Model = 0X12;
+
+        int Tx_data[] = {0x55, Model, 0x01, 0x02, 0x00, 0x00, 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
+    /** 接收到主车消息 发送成功回传
+     *
+     * @param CMD 回传命令
+     */
+    public void receiveReturn(int CMD){
 
-    //返回信息表示接收到信息了
-    public void receive( int o){
-        TYPE3 = 0X00;
-        determine = 0x00;
-        TYPE = 0x00;
-        MAJOR = 0x00;
-        FIRST = 0x00;
-        SECOND = 0x00;
-        THRID = 0x00;
-        CHECKSUM = 0x00;
+        int[] Tx_data = {0x55, 0xBC, CMD, 0x00, 0x00, 0x00, 0x00, 0xBB};
 
-        TYPE3 = (short) 0x0C;
-
-        determine =  (short) o;
-
-        sendzhu();
-    }
-    //结束
-    //返回信息表示接收到信息了
-    public void receive_End( ){
-        TYPE3 = 0X00;
-        determine = 0x00;
-        TYPE = 0x00;
-        MAJOR = 0x00;
-        FIRST = 0x00;
-        SECOND = 0x00;
-        THRID = 0x00;
-        CHECKSUM = 0x00;
-
-        TYPE3 = (short) 0x0D;
-
-        determine =  (short) 0x02;
-
-        sendzhu();
+        Send_Data(Tx_data);
     }
 
-    //红绿灯识别
-    public void traffic(  int one){
-        TYPE3 = 0X00;
-        determine = 0x00;
-        TYPE = 0x00;
-        MAJOR = 0x00;
-        FIRST = 0x00;
-        SECOND = 0x00;
-        THRID = 0x00;
-        CHECKSUM = 0x00;
+    /**
+     * 执行完主车的任务发送任务结束回传
+     *
+     * @param CMD 回传命令
+     */
+    public void receiveEnd(int CMD){
 
-        TYPE3 = 0X0B;
-        determine = 0x03;
-        TYPE = (short) one;
+        int[] Tx_data = {0x55, 0xBD, CMD, 0x00, 0x00, 0x00, 0x00, 0xBB};
 
-
-        sendzhu();
-    }
-    //二维码识别
-    public void qr(  int one,  int two,  int thrid,  int four,  int five,
-                    int six){
-        TYPE3 = 0X00;
-        determine = 0x00;
-        TYPE = 0x00;
-        MAJOR = 0x00;
-        FIRST = 0x00;
-        SECOND = 0x00;
-        THRID = 0x00;
-        CHECKSUM = 0x00;
-
-        TYPE3 = 0X0B;
-        determine = 0x02;
-        TYPE = (short) one;
-        MAJOR = (short) two;
-        FIRST = (short) thrid;
-        SECOND = (short) four;
-        THRID = (short) five;
-        CHECKSUM = (short) six;
-
-         sendzhu();
+        Send_Data(Tx_data);
     }
 
-    //车牌识别
-    public void plan(  byte one,  byte two,  byte thrid,  byte four,  byte five,
-                     byte six){
-        TYPE3 = 0X00;
-        determine = 0x00;
-        TYPE = 0x00;
-        MAJOR = 0x00;
-        FIRST = 0x00;
-        SECOND = 0x00;
-        THRID = 0x00;
-        CHECKSUM = 0x00;
-
-        TYPE3 = 0X0B;
-        determine = 0x04;
-        TYPE =  one;
-        MAJOR =  two;
-        FIRST =  thrid;
-        SECOND =  four;
-        THRID =  five;
-        CHECKSUM =  six;
-
-        sendzhu();
-    }
-
-    //图片形状数量传输
-    public void tuxiang(int ju_num,int yuan_num,int sj_num) {
-        MAJOR = 0xC0;//A6
-        SECOND = (byte) ju_num;
-        SECOND = (byte) yuan_num;
-        THRID = (byte) sj_num;
-        send();
-        yanchi(500);
-//        yanchi(1000);
-//        MAJOR = 0xC1;//A7
-//        FIRST = (byte) lin_num;
-//        SECOND = (byte) wuj_num;
-//        THRID = 0x00;
-//        send();
-//        yanchi(500);
-    }
-    //红绿灯
-    public void shibie(int yanse) {
-        MAJOR = 0xB0;
-        FIRST = (byte) (yanse);
-        send();
-    }
     //主从车数据接收状态转换
-    public void stateChange(final int i) {
+    public void stateChange(final int state) {
         final short temp = TYPE;
         new Thread(new Runnable() {
             @Override
             public void run() {
                 if (socket != null && socket.isConnected()) {
-                    if (i == 1) {//从车状态
-                        TYPE = 0x02;
-                        MAJOR = 0x80;
-                        FIRST = 0x01;
-                        SECOND = 0x00;
-                        THRID = 0x00;
-                        send();
+                    if (state == 1) {//从车状态
+                        int Tx_Data_1[] = {0x55, 0x02, 0x80, 0x01, 0x00, 0x00, 0x00, 0xBB};
+
+                        Send_Data(Tx_Data_1);
                         yanchi(500);
-                        TYPE = (byte) 0xAA;
-                        MAJOR = 0x80;
-                        FIRST = 0x01;
-                        SECOND = 0x00;
-                        THRID = 0x00;
-                        send();
-                        TYPE = 0x02;
-                    } else if (i == 2) {// 主车状态
-                        TYPE = 0x02;
-                        MAJOR = 0x80;
-                        FIRST = 0x00;
-                        SECOND = 0x00;
-                        THRID = 0x00;
-                        send();
+
+                        int Tx_Data_2[] = {0x55, 0xAA, 0x80, 0x01, 0x00, 0x00, 0x00, 0xBB};
+
+                        Send_Data(Tx_Data_2);
+                    } else if (state == 2) {// 主车状态
+
+                        int Tx_Data_1[] = {0x55, 0x02, 0x80, 0x00, 0x00, 0x00, 0x00, 0xBB};
+
+                        Send_Data(Tx_Data_1);
                         yanchi(500);
-                        TYPE = (byte) 0xAA;
-                        MAJOR = 0x80;
-                        FIRST = 0x00;
-                        SECOND = 0x00;
-                        THRID = 0x00;
-                        send();
-                        TYPE = 0xAA;
+
+                        int Tx_Data_2[] = {0x55, 0xAA, 0x80, 0x00, 0x00, 0x00, 0x00, 0xBB};
+
+                        Send_Data(Tx_Data_2);
                     }
-                    TYPE = temp;
                 } else {
                     Message msg = new Message();
                     msg.what = 2;
@@ -690,245 +535,161 @@ public class ConnectTransport {
         }).start();
     }
 
-    // 红外
-    public void infrared(final byte one, final byte two, final byte thrid, final byte four, final byte five,
-                         final byte six) {
+    /**
+     * 控制主车发送红外数据
+     *
+     * @param Tx_data  数据(6位)
+     */
+    public void infrared_Send(final int Tx_data[]) {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                MAJOR = 0x10;
-                FIRST = one;
-                SECOND = two;
-                THRID = thrid;
-                send();
-                yanchi(500);
-                MAJOR = 0x11;
-                FIRST = four;
-                SECOND = five;
-                THRID = six;
-                send();
-                yanchi(500);
-                MAJOR = 0x12;
-                FIRST = 0x00;
-                SECOND = 0x00;
-                THRID = 0x00;
-                send();
-                yanchi(1000);
+                int Tx_buff_1[] = {0x55, 0xAA, 0x10, Tx_data[0], Tx_data[1], Tx_data[2], 0x00, 0xBB};
+
+                Send_Data(Tx_buff_1);
+                yanchi(200);
+
+                int Tx_buff_2[] = {0x55, 0xAA, 0x11, Tx_data[3], Tx_data[4], Tx_data[5], 0x00, 0xBB};
+                Send_Data(Tx_buff_2);
+                yanchi(200);
+
+                int Tx_buff_3[] = {0x55, 0xAA, 0x12, 0x00, 0x00, 0x00, 0x00, 0xBB};
+                Send_Data(Tx_buff_3);
+                yanchi(200);
             }
         }).start();
     }
 
-    public void sendData(final byte[] bytes,int i){
-        for(int j = 0; j < i;j+=2){
-            if(j+2 == i){
-                MAJOR = 0x10;
-                FIRST = 0xff;
-                SECOND = 0x31;
-                THRID = bytes[j];
-                send();
-                yanchi(500);
-                MAJOR = 0x11;
-                FIRST = bytes[j+1];
-                SECOND = 0x55;
-                THRID = 0x00;
-                send();
-                yanchi(500);
-                MAJOR = 0x12;
-                FIRST = 0x00;
-                SECOND = 0x00;
-                THRID = 0x00;
-                send();
-                yanchi(500);
-            }else {
-                MAJOR = 0x10;
-                FIRST = 0xff;
-                SECOND = 0x31;
-                THRID = bytes[j];
-                send();
-                yanchi(500);
-                MAJOR = 0x11;
-                FIRST = bytes[j + 1];
-                SECOND = 0x00;
-                THRID = 0x00;
-                send();
-                yanchi(500);
-                MAJOR = 0x12;
-                FIRST = 0x00;
-                SECOND = 0x00;
-                THRID = 0x00;
-                send();
-                yanchi(500);
-            }
-        }
-
-
-    }
     /**
-     * 发送文本信息专用
+     * 控制主车发送红外数据
      *
-     * @param data
+     * @param data  数据(6位)
      */
-    public void sendData(final short[] data) {
-        MAJOR = 0x10;
-        FIRST = 0xff;
-        SECOND = data[0];
-        THRID = data[1];
-        send();
-        yanchi(200);//延时 如果觉得发过去单片机接收不全 就调高一点
-        MAJOR = 0x11;
-        FIRST = data[2];
-        SECOND = data[3];
-        THRID = 0x00;
-        send();
-        yanchi(200);//延时 如果觉得发过去单片机接收不全 就调高一点
-        MAJOR = 0x12;
-        FIRST = 0x00;
-        SECOND = 0x00;
-        THRID = 0x00;
-        send();
-        yanchi(200);//延时 如果觉得发过去单片机接收不全 就调高一点
+    public void Rotate_SendData_Infrared(final short[] data) {
+
+        int Tx_data[] = {0xff, data[0], data[1], data[2], data[3], 0x00};
+
+        infrared_Send(Tx_data);
     }
 
     /**
-     * ZigBee发送文本信息专用
      *
-     * @param bytes
+     * @param bytes     立体显示物发送文本信息
+     * @param len       长度
      */
-    public void zigbeeSendData(final byte[] bytes,int i){
-        for(int j = 0; j < i;j+=2){
-            if(j+2 >= i){
-                TYPE = 0x11;
-                MAJOR = 0x31;
-                FIRST = bytes[j];
-                if(j+1 == i){
-                    SECOND = 0X00;
+    public void Rotate_SendData_Zigbee(final byte[] bytes,int len){
+
+        int Tx_data[] = {0x55, 0x11, 0x31, 0x00, 0x00, 0x00, 0x00, 0xBB};
+
+        for(int j = 0; j < len;j+=2){
+            if(j+2 >= len){
+                Tx_data[3] = bytes[j];
+                if(j+1 == len){
+                    Tx_data[4] = 0X00;
                 }else{
-                    SECOND = bytes[j+1];
+                    Tx_data[4] = bytes[j+1];
                 }
-                THRID = 0x55;
-                send();
-                yanchi(500);
+                Tx_data[5] = 0x55;
+                Send_Data(Tx_data);
+                yanchi(50);
             }else {
-                TYPE = 0x11;
-                MAJOR = 0x31;
-                FIRST = bytes[j];
-                SECOND = bytes[j+1];
-                THRID = 0x00;
-                send();
-                yanchi(500);
+                Tx_data[3] = bytes[j];
+                Tx_data[4] = bytes[j+1];
+                Tx_data[5] = 0x00;
+                Send_Data(Tx_data);
+                yanchi(50);
             }
         }
-
-
     }
     /**
-     * ZigBee发送文本信息专用
+     * 立体显示物发送Zigbee命令
      *
      * @param data
      */
-    public void zigbeeSendData(final short[] data) {
-        TYPE = 0x11;
-        MAJOR = data[0];
-        FIRST = data[1];
-        SECOND = data[2];
-        THRID = data[3];
-        send();
-        TYPE = 0xAA;
+    public void Rotate_Send_Zigbee(final short[] data) {
+
+        int Tx_data[] = {0x55, 0x11, data[0], data[1], data[2], data[3], 0x00, 0xBB};
+
+        Send_Data(Tx_data);
         yanchi(600);
     }
 
-    // 程序自动执行
-    public void getID() {
-        TYPE = 0x07;
-        MAJOR = 0x09;
-        FIRST = 0x00;
-        SECOND = 0x00;
-        THRID = 0x00;
-        send();
-        TYPE = 0xAA;
+    /**
+     * 烽火台获取随机坐标
+     */
+    public void Alarm_GetCoordinates() {
+
+        int Tx_data[] = {0x55, 0x07, 0x09, 0x00, 0x00, 0x00, 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
-
-    // 双色led灯
-    public void lamp(byte command) {
-        MAJOR = 0x40;
-        FIRST = command;
-        SECOND = 0x00;
-        THRID = 0x00;
-        send();
-    }
-
-    // 指示灯
+    /**
+     * 主车指示灯控制
+     *
+     * @param left      左灯亮灭开关 1 开  0 关
+     * @param right     右灯亮灭开关 1 开  0 关
+     */
     public void light(int left, int right) {
+
+        int Tx_data[] = {0x55, 0xAA, 0x20, 0x00, 0x00, 0x00, 0x00, 0xBB};
+
         if (left == 1 && right == 1) {
-            MAJOR = 0x20;
-            FIRST = 0x01;
-            SECOND = 0x01;
-            THRID = 0x00;
-            send();
+            Tx_data[3] = 0x01;
+            Tx_data[4] = 0x01;
         } else if (left == 1 && right == 0) {
-            MAJOR = 0x20;
-            FIRST = 0x01;
-            SECOND = 0x00;
-            THRID = 0x00;
-            send();
+            Tx_data[3] = 0x01;
+            Tx_data[4] = 0x00;
         } else if (left == 0 && right == 1) {
-            MAJOR = 0x20;
-            FIRST = 0x00;
-            SECOND = 0x01;
-            THRID = 0x00;
+            Tx_data[3] = 0x00;
+            Tx_data[4] = 0x01;
             send();
-        } else if (left == 0 && right == 0) {
-            MAJOR = 0x20;
-            FIRST = 0x00;
-            SECOND = 0x00;
-            THRID = 0x00;
-            send();
+        } else {
+            Tx_data[3] = 0x00;
+            Tx_data[4] = 0x00;
         }
+        Send_Data(Tx_data);
     }
 
+    /**
+     * 蜂鸣器开关
+     *
+     * @param button    开关 1 开启 0 关闭
+     */
+    public void buzzer(int button) {
 
-    // 蜂鸣器
-    public void buzzer(int i) {
-        if (i == 1)
-            FIRST = 0x01;
-        else if (i == 0)
-            FIRST = 0x00;
-        MAJOR = 0x30;
-        SECOND = 0x00;
-        THRID = 0x00;
-        send();
+        int Switch = 0;
+
+        if (button == 1)
+            Switch = 0x01;
+        else if (button == 0)
+            Switch = 0x00;
+
+        int Tx_data[] = {0x55, 0xAA, 0x30, Switch, 0x00, 0x00, 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
     /**
      * 从车二维码识别
      */
     public void qr_rec(int state) {
-        byte temp = (byte) TYPE;
-        TYPE = 0x02;
-        MAJOR = 0x92;
-        FIRST = (byte) state;
-        SECOND = 0x00;
-        THRID = 0x00;
-        send();
-        TYPE = temp;
 
+        int Tx_data[] = {0x55, 0x02, 0x92, state, 0x00, 0x00, 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
     /**
      * 从车摄像头俯仰角控制
      *
-     * @param state
+     * @param state 角度
      */
     public void rb_cameraControl(int state) {
-        byte temp = (byte) TYPE;
-        TYPE = 0x02;
-        MAJOR = 0x91;
-        FIRST = 0x03;
-        SECOND = (byte) state;
-        THRID = 0x00;
-        send();
-        TYPE = temp;
+
+        int Tx_data[] = {0x55, 0x02, 0x91, 0x03, state, 0x00, 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
     /**
@@ -937,16 +698,19 @@ public class ConnectTransport {
      * @param gear 档位信息
      */
     public void gear(int gear) {
+
+        int Gears = 0;
+
         if (gear == 1)
-            MAJOR = 0x61;
+            Gears = 0x61;
         else if (gear == 2)
-            MAJOR = 0x62;
+            Gears = 0x62;
         else if (gear == 3)
-            MAJOR = 0x63;
-        FIRST = 0x00;
-        SECOND = 0x00;
-        THRID = 0x00;
-        send();
+            Gears = 0x63;
+
+        int Tx_data[] = {0x55, 0xAA, Gears, 0x00, 0x00, 0x00, 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
     private static boolean sendState = false; // 数据发送状态记录，为true时正在发送，为false时发送结束/关闭
@@ -957,24 +721,18 @@ public class ConnectTransport {
             if (!sendState && data != null) {
                 sendState = true; // 处于发送数据状态，开启发送拦截
                 XcApplication.executorServicetor.execute(() -> {
-                    MAJOR = 0x10;
-                    FIRST = 0xff;
-                    SECOND = data[0];
-                    THRID = data[1];
-                    send();
+                    int Tx_data_1[] = {0x55, 0xAA, 0x10, 0xff, data[0], data[1], 0x00, 0xBB};
+                    Send_Data(Tx_data_1);
                     yanchi(500);
-                    MAJOR = 0x11;
-                    FIRST = data[2];
-                    SECOND = data[3];
-                    THRID = data[4];
-                    send();
+
+                    int Tx_data_2[] = {0x55, 0xAA, 0x11, data[2], data[3], data[4], 0x00, 0xBB};
+                    Send_Data(Tx_data_2);
                     yanchi(500);
-                    MAJOR = 0x12;
-                    FIRST = 0x00;
-                    SECOND = 0x00;
-                    THRID = 0x00;
-                    send();
+
+                    int Tx_data_3[] = {0x55, 0xAA, 0x12, 0x00, 0x00, 0x00, 0x00, 0xBB};
+                    Send_Data(Tx_data_3);
                     yanchi(500);
+
                     if (tip)InfrareAdapter.handler.sendEmptyMessage(40); // 数据发送完毕
                     sendState = false;
                 });
@@ -992,14 +750,10 @@ public class ConnectTransport {
 
     //智能交通灯
     public void traffic_control(int type, int major, int first) {
-        byte temp = (byte) TYPE;
-        TYPE = (short) type;
-        MAJOR = (byte) major;
-        FIRST = (byte) first;
-        SECOND = 0x00;
-        THRID = 0x00;
-        send();
-        TYPE = temp;
+
+        int Tx_data[] = {0x55, type, major, first, 0x00, 0x00, 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
     /**
@@ -1009,155 +763,153 @@ public class ConnectTransport {
      * @param first 右侧舵机
      */
     public void rudder_control(int major, int first) {
-        byte temp = (byte) TYPE;
-        TYPE = (short) 0x0C;
-        MAJOR = (byte) 0x08;
-        FIRST = (byte) major;
-        SECOND = (byte) first;
-        THRID = 0x00;
-        send();
-        TYPE = temp;
+
+        int Tx_data[] = {0x55, 0x0C, 0x08, major, first, 0x00, 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
-    //立体车库控制
+    /**
+     * 立体车库 控制
+     *
+     * @param type      型号
+     * @param major     主命令
+     * @param first     副命令
+     */
     public void garage_control(int type, int major, int first) {
-        byte temp = (byte) TYPE;
-        TYPE = (short) type;
-        MAJOR = (byte) major;
-        FIRST = (byte) first;
-        SECOND = 0x00;
-        THRID = 0x00;
-        send();
-        TYPE = temp;
+
+        int Tx_data[] = {0x55, type, major, first, 0x00, 0x00, 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
-    public void gate(int major, int first, int second, int third) {// 闸门
-        byte temp = (byte) TYPE;
-        TYPE = 0x03;
-        MAJOR = (byte) major;
-        FIRST = (byte) first;
-        SECOND = (byte) second;
-        THRID = (byte) third;
-        send();
-        TYPE = temp;
+    /**
+     * 闸门控制
+     *
+     * @param major
+     * @param first
+     * @param second
+     * @param third
+     */
+    public void gate(int major, int first, int second, int third) {
+
+        int Tx_data[] = {0x55, 0x03, major, first, second, third, 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
-    //LCD 显示标志物进入计时模式
-    public void digital_close() {//数码管关闭
-        byte temp = (byte) TYPE;
-        TYPE = 0x04;
-        MAJOR = 0x03;
-        FIRST = 0x00;
-        SECOND = 0x00;
-        THRID = 0x00;
-        send();
-        TYPE = temp;
+    /**
+     * LCD 显示标志物进入计时关闭
+     */
+    public void digital_close() {
+
+        int Tx_data[] = {0x55, 0x04, 0x03, 0x00, 0x00, 0x00, 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
-    public void digital_open() {//数码管打开
-        byte temp = (byte) TYPE;
-        TYPE = 0x04;
-        MAJOR = 0x03;
-        FIRST = 0x01;
-        SECOND = 0x00;
-        THRID = 0x00;
-        send();
-        TYPE = temp;
+    /**
+     * LCD 显示标志物进入计时打开
+     */
+    public void digital_open() {
+
+        int Tx_data[] = {0x55, 0x04, 0x03, 0x01, 0x00, 0x00, 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
+    /**
+     * LCD 显示标志物进入计时清空
+     */
     public void digital_clear() {//数码管清零
-        byte temp = (byte) TYPE;
-        TYPE = 0x04;
-        MAJOR = 0x03;
-        FIRST = 0x02;
-        SECOND = 0x00;
-        THRID = 0x00;
-        send();
-        TYPE = temp;
+
+        int Tx_data[] = {0x55, 0x04, 0x03, 0x02, 0x00, 0x00, 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
-    public void digital_dic(int dis) {//LCD显示标志物第二排显示距离
+    /**
+     * LCD显示标志物第二排显示距离
+     *
+     * @param dis   距离
+     */
+    public void digital_dic(int dis) {
 
-        byte temp = (byte) TYPE;
-        int a = 0, b = 0, c = 0;
-        a = (dis / 100) & (0xF);
-        b = (dis % 100 / 10) & (0xF);
-        c = (dis % 10) & (0xF);
-        b = b << 4;
-        b = b | c;
-        TYPE = 0x04;
-        MAJOR = 0x04;
-        FIRST = 0x00;
-        SECOND = (short) (a);
-        THRID = (short) (b);
-        send();
-        TYPE = temp;
+        int Tx_data[] = {0x55, 0x04, 0x04, 0x00, (dis/100%10), ((dis/10%10)*16+(dis%10)), 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
-    public void digital(int i, int one, int two, int three) {// 数码管
-        byte temp = (byte) TYPE;
-        TYPE = 0x04;
-        if (i == 1) {//数据写入第一排数码管
-            MAJOR = 0x01;
-            FIRST = (byte) one;
-            SECOND = (byte) two;
-            THRID = (byte) three;
-        } else if (i == 2) {//数据写入第二排数码管
-            MAJOR = 0x02;
-            FIRST = (byte) one;
-            SECOND = (byte) two;
-            THRID = (byte) three;
-        }
-        send();
-        TYPE = temp;
+    /**
+     * 数码管显示指定数据
+     *
+     * @param rank  第几排 1-2
+     * @param one   数据1
+     * @param two   数据2
+     * @param three 数据3
+     */
+    public void digital(int rank, int one, int two, int three) {
+
+        int Tx_data[] = {0x55, 0x04, 0x00, one, two, three, 0x00, 0xBB};
+
+        if (rank == 1) Tx_data[2] = 0x01;
+        else Tx_data[2] = 0x02;
+
+        Send_Data(Tx_data);
     }
 
-    public void VoiceBroadcast()  //语音播报随机指令
-    {
-        byte temp = (byte) TYPE;
-        TYPE = (short) 0x06;
-        MAJOR = (short) 0x20;
-        FIRST = (byte) 0x01;
-        SECOND = (byte) 0x00;
-        THRID = (byte) 0x00;
-        send();
-        TYPE = temp;
+    /**
+     * 语音播报随机指令
+     */
+    public void VoiceBroadcast(){
+        int Tx_data[] = {0x55, 0x06, 0x20, 0x01, 0x00, 0x00, 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
-    public void voiceWeather(int[] weather)  //语音播报随机指令
-    {
-        byte temp = (byte) TYPE;
-        TYPE = (short) 0x06;
-        MAJOR = (short) 0x42;
-        FIRST = (byte) weather[0];
-        SECOND = (byte) weather[1];
-        THRID = (byte) 0x00;
-        send();
-        TYPE = temp;
+    /**
+     * 设置天气和温度
+     *
+     * @param weather   设置数组 下标0 是天气    下标1 是温度
+     */
+    public void voiceWeather(int[] weather) {
+
+        int Tx_data[] = {0x55, 0x06, 0x42, weather[0], weather[1], 0x00, 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
-    public void TFT_LCD(int type, int MAIN, int KIND, int COMMAD, int DEPUTY)  //tft lcd
-    {
-        byte temp = (byte) TYPE;
-        TYPE = (short) type;
-        MAJOR = (short) MAIN;
-        FIRST = (byte) KIND;
-        SECOND = (byte) COMMAD;
-        THRID = (byte) DEPUTY;
-        send();
-        TYPE = temp;
+    /**
+     * TFT 命令控制
+     *
+     * @param type      TFT 型号 0x0B(A)  0x08(B) 0x12(C)
+     * @param MAIN      主命令
+     * @param KIND      副命令1
+     * @param COMMAD    副命令2
+     * @param DEPUTY    副命令3
+     *
+     * 命令具体参考手册
+     */
+    public void TFT_LCD(int type, int MAIN, int KIND, int COMMAD, int DEPUTY) {
+
+        int Tx_data[] = {0x55, type, MAIN, KIND, COMMAD, DEPUTY, 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
+    /**
+     * 无线充电控制
+     *
+     * @param MAIN
+     * @param KIND
+     * @param COMMAD
+     * @param DEPUTY
+     */
     public void magnetic_suspension(int MAIN, int KIND, int COMMAD, int DEPUTY) //无线充电
     {
-        byte temp = (byte) TYPE;
-        TYPE = (short) 0x0A;
-        MAJOR = (short) MAIN;
-        FIRST = (byte) KIND;
-        SECOND = (byte) COMMAD;
-        THRID = (byte) DEPUTY;
-        send();
-        TYPE = temp;
+        int Tx_data[] = {0x55, 0x0A, MAIN, KIND, COMMAD, DEPUTY, 0x00, 0xBB};
+
+        Send_Data(Tx_data);
     }
 
     // 沉睡

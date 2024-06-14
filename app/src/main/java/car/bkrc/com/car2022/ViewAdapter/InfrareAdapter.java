@@ -112,14 +112,12 @@ public class InfrareAdapter extends RecyclerView.Adapter<InfrareAdapter.ViewHold
                     // TODO Auto-generated method stub
                     if (socket != null && socket.isConnected()) {
                         if (which == 0) {
-                            Connect_Transport.infrared((byte) 0x03, (byte) 0x05,
-                                    (byte) 0x14, (byte) 0x45, (byte) 0xDE,
-                                    (byte) 0x92);
+                            int[] infrared_Tx = {0x03, 0x05, 0x14, 0x45, 0xDE, 0x92};
+                            Connect_Transport.infrared_Send(infrared_Tx);
 
                         } else if (which == 1) {
-                            Connect_Transport.infrared((byte) 0x67, (byte) 0x34,
-                                    (byte) 0x78, (byte) 0xA2, (byte) 0xFD,
-                                    (byte) 0x27);
+                            int[] infrared_Tx = {0x67, 0x34, 0x78, 0xA2, 0xFD, 0x27};
+                            Connect_Transport.infrared_Send(infrared_Tx);
                         } else if (which == 2) {
                             getIDTipAction();
                         }
@@ -140,7 +138,7 @@ public class InfrareAdapter extends RecyclerView.Adapter<InfrareAdapter.ViewHold
         builder.setMessage("随机救援坐标为地图中心9个随机坐标点");
         // 设置一个PositiveButton
         builder.setPositiveButton("立刻获取", (dialog, which) -> {
-            Connect_Transport.getID();
+            Connect_Transport.Alarm_GetCoordinates();
         });
         // 设置一个NegativeButton
         builder.setNegativeButton("取消", (dialog, which) -> {
@@ -272,8 +270,8 @@ public class InfrareAdapter extends RecyclerView.Adapter<InfrareAdapter.ViewHold
                 data = new short[8];
                 data[0] = 0x32;
                 data[1] = id;
-                Connect_Transport.zigbeeSendData(data);
-                Connect_Transport.sendData(data);
+                Connect_Transport.Rotate_Send_Zigbee(data);
+                Connect_Transport.Rotate_SendData_Infrared(data);
                 InfrareAdapter.handler.sendEmptyMessage(50); // 数据发送完毕
             } else {
                 toastUtil.ShowToast("当前未连接到设备，请连接后重试！");

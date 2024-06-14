@@ -1,5 +1,9 @@
 package car.bkrc.com.car2022.Utils.OtherUtil;
 
+import static car.bkrc.com.car2022.ActivityView.FirstActivity.toastUtil;
+import static car.bkrc.com.car2022.DataProcessingModule.ConnectTransport.socket;
+import static car.bkrc.com.car2022.FragmentView.RightFragment1.TAG;
+
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
@@ -18,10 +22,6 @@ import car.bkrc.com.car2022.ActivityView.FirstActivity;
 import car.bkrc.com.car2022.R;
 import car.bkrc.com.car2022.Utils.CameraUtile.XcApplication;
 import car.bkrc.com.car2022.ViewAdapter.InfrareAdapter;
-
-import static car.bkrc.com.car2022.ActivityView.FirstActivity.toastUtil;
-import static car.bkrc.com.car2022.DataProcessingModule.ConnectTransport.socket;
-import static car.bkrc.com.car2022.FragmentView.RightFragment1.TAG;
 
 
 public class CodeConversion {
@@ -136,9 +136,9 @@ public class CodeConversion {
                                 InfrareAdapter.handler.sendEmptyMessage(10); // 数据发送完毕
                             } else bytes[3] = (byte) (0x00);
                             if (isZigBee) {
-                                FirstActivity.Connect_Transport.zigbeeSendData(bytes);
+                                FirstActivity.Connect_Transport.Rotate_Send_Zigbee(bytes);
                             } else {
-                                FirstActivity.Connect_Transport.sendData(bytes);
+                                FirstActivity.Connect_Transport.Rotate_SendData_Infrared(bytes);
                             }
                             bytes = new short[4];
                             bytes[0] = (byte) (0x31);//自定义显示的协议
@@ -153,9 +153,9 @@ public class CodeConversion {
                                         InfrareAdapter.handler.sendEmptyMessage(10); // 数据发送完毕
                                     } else bytes[3] = (byte) (0x00);
                                     if (isZigBee) {
-                                        FirstActivity.Connect_Transport.zigbeeSendData(bytes);
+                                        FirstActivity.Connect_Transport.Rotate_Send_Zigbee(bytes);
                                     } else {
-                                        FirstActivity.Connect_Transport.sendData(bytes);
+                                        FirstActivity.Connect_Transport.Rotate_SendData_Infrared(bytes);
                                     }
                                     solt = 1;
                                     bytes = new short[4];
