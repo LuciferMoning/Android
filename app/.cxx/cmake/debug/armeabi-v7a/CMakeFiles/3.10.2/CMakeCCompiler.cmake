@@ -1,7 +1,7 @@
-set(CMAKE_C_COMPILER "D:/android/Sdk/ndk/26.2.11394342/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe")
+set(CMAKE_C_COMPILER "C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "Clang")
-set(CMAKE_C_COMPILER_VERSION "17.0.2")
+set(CMAKE_C_COMPILER_VERSION "18.0.1")
 set(CMAKE_C_COMPILER_VERSION_INTERNAL "")
 set(CMAKE_C_COMPILER_WRAPPER "")
 set(CMAKE_C_STANDARD_COMPUTED_DEFAULT "11")
@@ -16,9 +16,9 @@ set(CMAKE_C_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "D:/android/Sdk/ndk/26.2.11394342/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ar.exe")
+set(CMAKE_AR "C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ar.exe")
 set(CMAKE_C_COMPILER_AR "CMAKE_C_COMPILER_AR-NOTFOUND")
-set(CMAKE_RANLIB "D:/android/Sdk/ndk/26.2.11394342/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ranlib.exe")
+set(CMAKE_RANLIB "C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ranlib.exe")
 set(CMAKE_C_COMPILER_RANLIB "CMAKE_C_COMPILER_RANLIB-NOTFOUND")
 set(CMAKE_LINKER "CMAKE_LINKER-NOTFOUND")
 set(CMAKE_COMPILER_IS_GNUCC )
@@ -69,5 +69,5 @@ endif()
 
 
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "-l:libunwind.a;dl;c;-l:libunwind.a;dl")
-set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "D:/android/Sdk/ndk/26.2.11394342/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/17/lib/linux/arm;D:/android/Sdk/ndk/26.2.11394342/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/24;D:/android/Sdk/ndk/26.2.11394342/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi;D:/android/Sdk/ndk/26.2.11394342/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/toolchains/llvm/prebuilt/windows-x86_64/lib/clang/18/lib/linux/arm;C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/24;C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi;C:/Software/DevelopmentEnvironment/Android/SDK/ndk/27.0.11902837/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
