@@ -1,11 +1,42 @@
+# Android Studio项目忽略配置
+
+# 忽略编译输出
+build/
+app/build/
+out/
+release/
+
+# 忽略Gradle配置缓存
+.gradle/
+
+# 忽略IDE相关配置与索引
+.idea/
 *.iml
-.gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.properties
-app/.cxx
+.external-build/
+
+# 忽略日志和测试结果
+*.log
+/test-results/
+**/test_output/
+
+# 忽略本地配置与密钥
+local.properties
+keystore.*
+google-services.json
+
+# 忽略模拟器生成的数据
+.android/
+.avd/
+.emulator_console_auth_token
+
+# 忽略C/C++构建输出
+externalNativeBuild/
+
+# 忽略其他可能的个人设置或生成的文件
+*.DS_Store
+*.idea/*
+*.cache/
+*.diff
+*.patch
+
+# 如果项目中有使用特定工具或库产生的文件，也应该在这里添加相应的忽略规则
