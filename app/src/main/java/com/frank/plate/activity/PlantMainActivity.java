@@ -24,7 +24,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import car.bkrc.com.car2022.ActivityView.FirstActivity;
-import car.bkrc.com.car2022.FragmentView.RightFragment1;
+import car.bkrc.com.car2022.Main.Action;
 
 
 //import car.bkrc.com.FirstActivity;
@@ -42,7 +42,7 @@ public class PlantMainActivity {
     public  static boolean loadedOpenCV;
     public static Context m_context;
     public static int falg_plant = 0;
-    private static RightFragment1 rightFragment1 = new RightFragment1();
+    private static Action action = new Action();
     static int cns = 0;
     private static ImageView img_plate;
 
@@ -92,7 +92,7 @@ public class PlantMainActivity {
                         }
                     }
                     Log.e("TAG1", "最后处理plantresult:"+ss);
-                    rightFragment1.resultplan(ss);
+                    action.resultplan(ss);
 //                    if(TextUtils.isEmpty(ss)){
 //                        Log.e("TAG11","车牌识别为空");
 //

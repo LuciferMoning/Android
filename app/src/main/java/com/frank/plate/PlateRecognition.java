@@ -21,7 +21,7 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 
 import car.bkrc.com.car2022.ActivityView.FirstActivity;
-import car.bkrc.com.car2022.FragmentView.RightFragment1;
+import car.bkrc.com.car2022.Main.Action;
 
 /**
  * 车牌识别处理
@@ -40,7 +40,7 @@ public class PlateRecognition {
     private long handle;
     Button btnShape;
     private int cns = 0;
-    private static RightFragment1 rightFragment1 = new RightFragment1();
+    private static Action action = new Action();
 
     public PlateRecognition(Context context, Handler handler){
         this.context = context;
@@ -167,12 +167,12 @@ public class PlateRecognition {
 //            Log.e(TAG, "plateRecognize: "+result );
 //            Log.e(TAG, "plateRecognize: "+"车" );
             if(cns > 10){
-                rightFragment1.resultplan("000000");
+                action.resultplan("000000");
                 return;
             }
             FirstActivity.Connect_Transport.TFT_LCD(0xAA, 0x51, 0x00, 0x00, 0x00);
             FirstActivity.Connect_Transport.TFT_LicensePlate_PageDown('B');
-            rightFragment1.Plate_ShiBie2();
+            action.Plate_ShiBie2();
             cns++;
             System.out.println("车牌识别次数"+cns);
 
@@ -209,7 +209,7 @@ public class PlateRecognition {
     private static native void releasePlateRecognizer(long  object);
     private static native String startRecognize(long  inputMat, long object);
 
-    public void yanchi(int time) {
+    public void Delay_ms(int time) {
         try {
             Thread.sleep(time);
         } catch (InterruptedException e) {

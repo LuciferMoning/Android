@@ -1,6 +1,6 @@
 package car.bkrc.com.car2022.DataProcessingModule;
 
-import static car.bkrc.com.car2022.FragmentView.RightFragment1.TAG;
+import static car.bkrc.com.car2022.Main.Action.TAG;
 
 import android.os.Handler;
 import android.os.Message;
@@ -510,7 +510,7 @@ public class ConnectTransport {
                         int Tx_Data_1[] = {0x55, 0x02, 0x80, 0x01, 0x00, 0x00, 0x00, 0xBB};
 
                         Send_Data(Tx_Data_1);
-                        yanchi(500);
+                        Delay_ms(500);
 
                         int Tx_Data_2[] = {0x55, 0xAA, 0x80, 0x01, 0x00, 0x00, 0x00, 0xBB};
 
@@ -520,7 +520,7 @@ public class ConnectTransport {
                         int Tx_Data_1[] = {0x55, 0x02, 0x80, 0x00, 0x00, 0x00, 0x00, 0xBB};
 
                         Send_Data(Tx_Data_1);
-                        yanchi(500);
+                        Delay_ms(500);
 
                         int Tx_Data_2[] = {0x55, 0xAA, 0x80, 0x00, 0x00, 0x00, 0x00, 0xBB};
 
@@ -547,15 +547,15 @@ public class ConnectTransport {
                 int Tx_buff_1[] = {0x55, 0xAA, 0x10, Tx_data[0], Tx_data[1], Tx_data[2], 0x00, 0xBB};
 
                 Send_Data(Tx_buff_1);
-                yanchi(200);
+                Delay_ms(200);
 
                 int Tx_buff_2[] = {0x55, 0xAA, 0x11, Tx_data[3], Tx_data[4], Tx_data[5], 0x00, 0xBB};
                 Send_Data(Tx_buff_2);
-                yanchi(200);
+                Delay_ms(200);
 
                 int Tx_buff_3[] = {0x55, 0xAA, 0x12, 0x00, 0x00, 0x00, 0x00, 0xBB};
                 Send_Data(Tx_buff_3);
-                yanchi(200);
+                Delay_ms(200);
             }
         }).start();
     }
@@ -591,13 +591,13 @@ public class ConnectTransport {
                 }
                 Tx_data[5] = 0x55;
                 Send_Data(Tx_data);
-                yanchi(50);
+                Delay_ms(50);
             }else {
                 Tx_data[3] = bytes[j];
                 Tx_data[4] = bytes[j+1];
                 Tx_data[5] = 0x00;
                 Send_Data(Tx_data);
-                yanchi(50);
+                Delay_ms(50);
             }
         }
     }
@@ -611,7 +611,7 @@ public class ConnectTransport {
         int Tx_data[] = {0x55, 0x11, data[0], data[1], data[2], data[3], 0x00, 0xBB};
 
         Send_Data(Tx_data);
-        yanchi(600);
+        Delay_ms(600);
     }
 
     /**
@@ -723,15 +723,15 @@ public class ConnectTransport {
                 XcApplication.executorServicetor.execute(() -> {
                     int Tx_data_1[] = {0x55, 0xAA, 0x10, 0xff, data[0], data[1], 0x00, 0xBB};
                     Send_Data(Tx_data_1);
-                    yanchi(500);
+                    Delay_ms(500);
 
                     int Tx_data_2[] = {0x55, 0xAA, 0x11, data[2], data[3], data[4], 0x00, 0xBB};
                     Send_Data(Tx_data_2);
-                    yanchi(500);
+                    Delay_ms(500);
 
                     int Tx_data_3[] = {0x55, 0xAA, 0x12, 0x00, 0x00, 0x00, 0x00, 0xBB};
                     Send_Data(Tx_data_3);
-                    yanchi(500);
+                    Delay_ms(500);
 
                     if (tip)InfrareAdapter.handler.sendEmptyMessage(40); // 数据发送完毕
                     sendState = false;
@@ -913,7 +913,7 @@ public class ConnectTransport {
     }
 
     // 沉睡
-    public void yanchi(int time) {
+    public void Delay_ms(int time) {
         try {
             Thread.sleep(time);
         } catch (InterruptedException e) {

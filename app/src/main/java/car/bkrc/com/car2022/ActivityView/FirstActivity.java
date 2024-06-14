@@ -47,7 +47,7 @@ import java.util.concurrent.Executors;
 
 import car.bkrc.com.car2022.DataProcessingModule.ConnectTransport;
 import car.bkrc.com.car2022.FragmentView.LeftFragment;
-import car.bkrc.com.car2022.FragmentView.RightFragment1;
+import car.bkrc.com.car2022.Main.Action;
 import car.bkrc.com.car2022.FragmentView.RightInfraredFragment;
 import car.bkrc.com.car2022.FragmentView.RightOtherFragment;
 import car.bkrc.com.car2022.FragmentView.RightZigbeeFragment;
@@ -205,7 +205,7 @@ public class FirstActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(RightFragment1.getInstance());
+        adapter.addFragment(Action.getInstance());
         adapter.addFragment(RightZigbeeFragment.getInstance());
         adapter.addFragment(RightInfraredFragment.getInstance());
         adapter.addFragment(RightOtherFragment.getInstance());

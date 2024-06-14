@@ -1,5 +1,9 @@
 package car.bkrc.com.car2022.FragmentView;
 
+import static car.bkrc.com.car2022.ActivityView.FirstActivity.IPCamera;
+import static car.bkrc.com.car2022.ActivityView.FirstActivity.toastUtil;
+import static car.bkrc.com.car2022.Main.Action.TAG;
+
 import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -9,7 +13,6 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import androidx.fragment.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -19,6 +22,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
 
 import com.bkrcl.control_car_video.camerautil.CameraCommandUtil;
 
@@ -33,10 +38,6 @@ import car.bkrc.com.car2022.R;
 import car.bkrc.com.car2022.Utils.CameraUtile.XcApplication;
 import car.bkrc.com.car2022.Utils.OtherUtil.CameraConnectUtil;
 import car.bkrc.com.car2022.Utils.OtherUtil.RadiusUtil;
-
-import static car.bkrc.com.car2022.ActivityView.FirstActivity.IPCamera;
-import static car.bkrc.com.car2022.ActivityView.FirstActivity.toastUtil;
-import static car.bkrc.com.car2022.FragmentView.RightFragment1.TAG;
 
 public class LeftFragment extends Fragment{
 

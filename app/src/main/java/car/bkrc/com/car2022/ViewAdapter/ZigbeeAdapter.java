@@ -416,17 +416,17 @@ public class ZigbeeAdapter extends RecyclerView.Adapter<ZigbeeAdapter.ViewHolder
                 switch (which) {
                     case 0:
                         FirstActivity.Connect_Transport.TFT_LCD(0x08, 0x20, 'Z', '7', '9');
-                        FirstActivity.Connect_Transport.yanchi(500);
+                        FirstActivity.Connect_Transport.Delay_ms(500);
                         FirstActivity.Connect_Transport.TFT_LCD(0x08, 0x21, '9', 'C', '4');
                         break;
                     case 1:
                         FirstActivity.Connect_Transport.TFT_LCD(0x08, 0x20, 'B', '5', '5');
-                        FirstActivity.Connect_Transport.yanchi(500);
+                        FirstActivity.Connect_Transport.Delay_ms(500);
                         FirstActivity.Connect_Transport.TFT_LCD(0x08, 0x21, '4', 'H', '1');
                         break;
                     case 2:
                         FirstActivity.Connect_Transport.TFT_LCD(0x08, 0x20, 'D', '8', '8');
-                        FirstActivity.Connect_Transport.yanchi(500);
+                        FirstActivity.Connect_Transport.Delay_ms(500);
                         FirstActivity.Connect_Transport.TFT_LCD(0x08, 0x21, '8', 'B', '8');
                         break;
                 }
@@ -617,17 +617,17 @@ public class ZigbeeAdapter extends RecyclerView.Adapter<ZigbeeAdapter.ViewHolder
                 switch (which) {
                     case 0:
                         FirstActivity.Connect_Transport.gate(0x10, 'A', '1', '2');
-                        FirstActivity.Connect_Transport.yanchi(500);
+                        FirstActivity.Connect_Transport.Delay_ms(500);
                         FirstActivity.Connect_Transport.gate(0x11, '3', 'B', '4');
                         break;
                     case 1:
                         FirstActivity.Connect_Transport.gate(0x10, 'B', '5', '6');
-                        FirstActivity.Connect_Transport.yanchi(500);
+                        FirstActivity.Connect_Transport.Delay_ms(500);
                         FirstActivity.Connect_Transport.gate(0x11, '7', 'C', '8');
                         break;
                     case 2:
                         FirstActivity.Connect_Transport.gate(0x10, 'D', '9', '1');
-                        FirstActivity.Connect_Transport.yanchi(500);
+                        FirstActivity.Connect_Transport.Delay_ms(500);
                         FirstActivity.Connect_Transport.gate(0x11, '0', 'E', '1');
                         break;
                 }
@@ -1112,17 +1112,17 @@ public class ZigbeeAdapter extends RecyclerView.Adapter<ZigbeeAdapter.ViewHolder
                 switch (which) {
                     case 0:
                         FirstActivity.Connect_Transport.TFT_LCD(0x0B, 0x20, 'A', '1', '2');
-                        FirstActivity.Connect_Transport.yanchi(500);
+                        FirstActivity.Connect_Transport.Delay_ms(500);
                         FirstActivity.Connect_Transport.TFT_LCD(0x0B, 0x21, '3', 'B', '4');
                         break;
                     case 1:
                         FirstActivity.Connect_Transport.TFT_LCD(0x0B, 0x20, 'B', '5', '6');
-                        FirstActivity.Connect_Transport.yanchi(500);
+                        FirstActivity.Connect_Transport.Delay_ms(500);
                         FirstActivity.Connect_Transport.TFT_LCD(0x0B, 0x21, '7', 'C', '8');
                         break;
                     case 2:
                         FirstActivity.Connect_Transport.TFT_LCD(0x0B, 0x20, 'D', '9', '1');
-                        FirstActivity.Connect_Transport.yanchi(500);
+                        FirstActivity.Connect_Transport.Delay_ms(500);
                         FirstActivity.Connect_Transport.TFT_LCD(0x0B, 0x21, '0', 'E', '1');
                         break;
                 }

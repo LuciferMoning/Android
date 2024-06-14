@@ -1,4 +1,4 @@
-package car.bkrc.com.car2022.FragmentView;
+package car.bkrc.com.car2022.Main;
 
 import static car.bkrc.com.car2022.ActivityView.FirstActivity.Connect_Transport;
 import static car.bkrc.com.car2022.ActivityView.FirstActivity.toastUtil;
@@ -60,6 +60,7 @@ import java.util.TimerTask;
 import car.bkrc.com.car2022.ActivityView.FirstActivity;
 import car.bkrc.com.car2022.ActivityView.LoginActivity;
 import car.bkrc.com.car2022.DataProcessingModule.ConnectTransport;
+import car.bkrc.com.car2022.FragmentView.LeftFragment;
 import car.bkrc.com.car2022.MessageBean.DataRefreshBean;
 import car.bkrc.com.car2022.MessageBean.StateChangeBean;
 import car.bkrc.com.car2022.R;
@@ -71,7 +72,7 @@ import car.bkrc.com.car2022.bar.binqr.qrcolouer;
 import car.bkrc.com.car2022.bar.ocr.TestInferOcrTask;
 import car.bkrc.com.car2022.bar.opencv4camera.MainActivity;
 import car.bkrc.com.car2022.bar.yolov5.YoloV5Ncnn;
-public class RightFragment1 extends Fragment {
+public class Action extends Fragment {
 
     TensorFlowInferenceInterface inferenceInterface;
     private YoloV5Ncnn yolov5ncnn = new YoloV5Ncnn();
@@ -134,11 +135,11 @@ public class RightFragment1 extends Fragment {
         return stop_flag;
     }
 
-    public static RightFragment1 getInstance() {
+    public static Action getInstance() {
         return RightFragment1Holder.sInstance;
     }
     private static class RightFragment1Holder {
-        private static final RightFragment1 sInstance = new RightFragment1();
+        private static final Action sInstance = new Action();
     }
     int k  =0;
     // 接受显示设备发送的数据
@@ -218,7 +219,7 @@ public class RightFragment1 extends Fragment {
                 if(mByte[2] == 0x02){//二维码识别
 
                     connectTransport.receiveReturn( 2);
-                    connectTransport.yanchi(1000);
+                    connectTransport.Delay_ms(1000);
                     qr(5);
                     qr(5);
 
@@ -230,7 +231,7 @@ public class RightFragment1 extends Fragment {
                 }else if(mByte[2] == 0x03){//信号灯识别
 
                     connectTransport.receiveReturn( 2);
-                    Connect_Transport.yanchi(1000);
+                    Connect_Transport.Delay_ms(1000);
                     trafficLightDis(bitmap);
                     iniColor(bitmap);
 
@@ -276,9 +277,9 @@ public class RightFragment1 extends Fragment {
                     connectTransport.receiveReturn( 2);
 
                     Connect_Transport.gate(0x10, planss[0], planss[1], planss[2]);
-                    Connect_Transport.yanchi(500);
+                    Connect_Transport.Delay_ms(500);
                     Connect_Transport.gate(0x11, planss[3], planss[4], planss[5]);
-                    Connect_Transport.yanchi(500);
+                    Connect_Transport.Delay_ms(500);
                     Connect_Transport.gate(0x01, 0x01, 0x00, 0x00);
 
                 }else if(mByte[2] == 0x10){ //立体显示标志物
@@ -301,9 +302,9 @@ public class RightFragment1 extends Fragment {
                 else if(mByte[2] == 0x12){//报警台
                     int[] infrared_Tx = {0x03, 0x05, 0x14, 0x45, 0xDE, 0x92};
                     connectTransport.receiveReturn( 0x02);
-                    connectTransport.yanchi(500);
+                    connectTransport.Delay_ms(500);
                     connectTransport.infrared_Send(infrared_Tx);
-                    connectTransport.yanchi(500);
+                    connectTransport.Delay_ms(500);
                 }
                 else if(mByte[2] == 0x13){//发送八位数据
                     connectTransport.receiveReturn( 2);
@@ -321,7 +322,7 @@ public class RightFragment1 extends Fragment {
     private void jtbz(){
         while(jt){
             Traffic_Sign();
-            connectTransport.yanchi(300);
+            connectTransport.Delay_ms(300);
             for (int i = 0; i <arr2.length ; i++) {
                 if(arr2[i] !=0 ){
 

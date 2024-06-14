@@ -2,7 +2,7 @@ package car.bkrc.com.car2022.Utils.OtherUtil;
 
 import static car.bkrc.com.car2022.ActivityView.FirstActivity.toastUtil;
 import static car.bkrc.com.car2022.DataProcessingModule.ConnectTransport.socket;
-import static car.bkrc.com.car2022.FragmentView.RightFragment1.TAG;
+import static car.bkrc.com.car2022.Main.Action.TAG;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
