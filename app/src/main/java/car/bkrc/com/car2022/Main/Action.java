@@ -45,7 +45,6 @@ import org.greenrobot.eventbus.ThreadMode;
 import org.opencv.android.Utils;
 import org.opencv.core.Mat;
 import org.opencv.core.Rect;
-import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -66,18 +65,14 @@ import car.bkrc.com.car2022.MessageBean.StateChangeBean;
 import car.bkrc.com.car2022.R;
 import car.bkrc.com.car2022.Utils.CameraUtile.XcApplication;
 import car.bkrc.com.car2022.Utils.OtherUtil.WiFiStateUtil;
-import car.bkrc.com.car2022.bar.Text.sumResult;
-import car.bkrc.com.car2022.bar.binqr.RE;
 import car.bkrc.com.car2022.bar.binqr.qrcolouer;
 import car.bkrc.com.car2022.bar.ocr.TestInferOcrTask;
 import car.bkrc.com.car2022.bar.opencv4camera.MainActivity;
 import car.bkrc.com.car2022.bar.yolov5.YoloV5Ncnn;
 public class Action extends Fragment {
 
-    TensorFlowInferenceInterface inferenceInterface;
     private YoloV5Ncnn yolov5ncnn = new YoloV5Ncnn();
     private TestInferOcrTask testInferOcrTask = new TestInferOcrTask();
-
 
     String Camera_show_ip = null;
     private CameraCommandUtil cameraCommandUtil;
@@ -106,12 +101,9 @@ public class Action extends Fragment {
 
     private boolean dateGetState = true; // 主从车接收状态切换
     private static car.bkrc.com.car2022.bar.binqr.qrcolouer qrcolouer = new qrcolouer();
-    private static RE re = new RE();
-    private int stop_flag;
+    public int stop_flag;
 
     Dialog dia;
-
-    sumResult sumResult = new sumResult();
 
     ConnectTransport connectTransport = new ConnectTransport();
 
@@ -120,20 +112,14 @@ public class Action extends Fragment {
      */
     String strtxt = "";
     int inColor = 0;
-    String longestSubstring = "";
-    boolean qr = true,plan = true,tux = true,po = true,jt = true;
+    boolean tux = true,po = true,jt = true;
     int ju_num = 0;
     int yuan_num = 0;
     int sj_num = 0;
     int lin_num=0;
     int wuj_num = 0;
     int cns2 = 0;
-    String cn = "",cout = "01",AB = "0",CD = "0";
     char[] planss  = new char[10];
-    //
-    public int getStop_flag() {
-        return stop_flag;
-    }
 
     public static Action getInstance() {
         return RightFragment1Holder.sInstance;
@@ -173,10 +159,10 @@ public class Action extends Fragment {
                         if (dateGetState) {
                             // 显示数据
                             stateTV.setText(mByte[2] + "");              // 运行状态
-                            psStatusTV.setText(psStatus + "");        // 光敏电阻
-                            codedDiskTV.setText(codedDisk + "");      // 码盘
-                            lightTV.setText(light + " lx");           // 光照度
-                            ultraSonicTV.setText(ultraSonic + " mm"); // 超声波
+                            psStatusTV.setText(psStatus + "");          // 光敏电阻
+                            codedDiskTV.setText(codedDisk + "");        // 码盘
+                            lightTV.setText(light + " lx");             // 光照度
+                            ultraSonicTV.setText(ultraSonic + " mm");   // 超声波
                         }
                     }
                     if (mByte[1] == (byte) 0x02) //从车
@@ -230,13 +216,17 @@ public class Action extends Fragment {
 
                 }else if(mByte[2] == 0x03){//信号灯识别
 
+                    Log.e("信号灯:", "进入");
+//                    cameraCommandUtil.postHttp(FirstActivity.IPCamera, 0, 3);
+                    Connect_Transport.Delay_ms(2000);
                     connectTransport.receiveReturn( 2);
-                    Connect_Transport.Delay_ms(1000);
+                    Connect_Transport.Delay_ms(2000);
                     trafficLightDis(bitmap);
                     iniColor(bitmap);
+                    bt_start_initial.performClick();
 
-                    if(inColor!=0){
-                        switch (mByte[3] ){
+                    if(inColor!=0) {
+                        switch (mByte[3]) {
                             case 1:
                                 Connect_Transport.traffic_control(0x0E, 0x02, inColor);
                                 break;
@@ -792,10 +782,10 @@ public class Action extends Fragment {
         toastUtil.ShowToast("限速"+arr2[0]+"左转"+arr2[1]+"禁止左转"+arr2[2]+"掉头"+arr2[3]+"禁止掉头"+arr2[4]+"右转"+arr2[5]+"禁止右转"+arr2[6]+"直行"+arr2[7]+"禁止直行"+arr2[8]);
 
     }
-    //二维码
+    //二维码位置查询
     private void setQr(){
         k = 0;
-        boolean ret_init = yolov5ncnn.Init3(getContext().getAssets());
+        boolean ret_init = yolov5ncnn.InitQr(getContext().getAssets());
         if (!ret_init)
         {
             Log.e("MainActivity", "yolov5ncnn Init failed");
@@ -803,7 +793,7 @@ public class Action extends Fragment {
         if (bitmap == null)
             return;
 
-        YoloV5Ncnn.Obj[] objects = yolov5ncnn.Detect3(bitmap, false);
+        YoloV5Ncnn.Obj[] objects = yolov5ncnn.DetectQr(bitmap, false);
 
         showObjects(objects);
     }
@@ -1311,6 +1301,7 @@ public class Action extends Fragment {
         // draw objects on bitmap
         Bitmap rgba = bitmap.copy(Bitmap.Config.ARGB_8888, true);
 
+        //
         final int[] colors = new int[] {
                 Color.rgb( 54,  67, 244),
                 Color.rgb( 99,  30, 233),

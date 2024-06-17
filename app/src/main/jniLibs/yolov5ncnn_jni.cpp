@@ -1063,7 +1063,7 @@ JNIEXPORT jobjectArray JNICALL Java_car_bkrc_com_car2022_bar_yolov5_YoloV5Ncnn_D
     return jObjArray;
 }
 //二维码
-JNIEXPORT jboolean JNICALL Java_car_bkrc_com_car2022_bar_yolov5_YoloV5Ncnn_Init3(JNIEnv* env, jobject thiz, jobject assetManager)
+JNIEXPORT jboolean JNICALL Java_car_bkrc_com_car2022_bar_yolov5_YoloV5Ncnn_InitQr(JNIEnv* env, jobject thiz, jobject assetManager)
 {
     ncnn::Option opt;
     opt.lightmode = true;
@@ -1118,7 +1118,7 @@ JNIEXPORT jboolean JNICALL Java_car_bkrc_com_car2022_bar_yolov5_YoloV5Ncnn_Init3
     return JNI_TRUE;
 }
 // public native Obj[] Detect(Bitmap bitmap, boolean use_gpu);
-JNIEXPORT jobjectArray JNICALL Java_car_bkrc_com_car2022_bar_yolov5_YoloV5Ncnn_Detect3(JNIEnv* env, jobject thiz, jobject bitmap, jboolean use_gpu)
+JNIEXPORT jobjectArray JNICALL Java_car_bkrc_com_car2022_bar_yolov5_YoloV5Ncnn_DetectQr(JNIEnv* env, jobject thiz, jobject bitmap, jboolean use_gpu)
 {
     if (use_gpu == JNI_TRUE && ncnn::get_gpu_count() == 0)
     {
