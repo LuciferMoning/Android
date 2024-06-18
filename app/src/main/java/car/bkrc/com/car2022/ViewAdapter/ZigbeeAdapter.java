@@ -1024,10 +1024,10 @@ public class ZigbeeAdapter extends RecyclerView.Adapter<ZigbeeAdapter.ViewHolder
                         TFT_A_show();
                         break;
                     case 1:
-                        FirstActivity.Connect_Transport.TFT_LCD(0xAA, 0x50, 0x00, 0x00, 0x00);
+                        FirstActivity.Connect_Transport.TFT_LCD(0x0B, 0x10, 0x01, 0x00, 0x00);
                         break;
                     case 2:
-                        FirstActivity.Connect_Transport.TFT_LCD(0xAA, 0x51, 0x00, 0x00, 0x00);
+                        FirstActivity.Connect_Transport.TFT_LCD(0x0B, 0x10, 0x02, 0x00, 0x00);
                         break;
                     case 3:
                         FirstActivity.Connect_Transport.TFT_LCD(0x0B, 0x10, 0x03, 0x00, 0x00);
