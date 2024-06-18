@@ -41,9 +41,9 @@ public class sumResult {
 //        return null;//出错
 //    }
 //
-//    public static Double Result(String qr) {
-//        double str = getResult(qr);
-//        System.out.println(getResult(qr));
+//    public static Double Result(String Qr_Recongenize) {
+//        double str = getResult(Qr_Recongenize);
+//        System.out.println(getResult(Qr_Recongenize));
 //
 //        return str;
 

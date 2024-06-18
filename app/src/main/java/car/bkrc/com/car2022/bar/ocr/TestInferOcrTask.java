@@ -27,6 +27,7 @@ public class TestInferOcrTask {
     private static final String SERIAL_NUM = " ";
     public static String restr="";
 
+
     public String ocr()  {
             restr = "";
             new Thread(new Runnable() {
@@ -64,8 +65,8 @@ public class TestInferOcrTask {
                                 } else {
                                     resStr = "{}";
                                 }
-                                Log.e("TAG", "Predict " + j + ": " + resStr + "\n");
-                                Log.e("TAG", "Predict " + j + ": " + restr + "\n");
+                                Log.e("文字识别", "Predict " + j + ": " + resStr + "\n");
+                                Log.e("文字识别", "Predict " + j + ": " + restr + "\n");
                             }
 
                             manager.destroy();

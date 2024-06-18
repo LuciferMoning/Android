@@ -26,7 +26,7 @@ public class YoloV5Ncnn
     // 行人
     public native boolean Init2(AssetManager mgr);
     //二维码
-    public native boolean Init3(AssetManager mgr);
+    public native boolean InitQr(AssetManager mgr);
     public class Obj
     {
         public float x;
@@ -41,7 +41,7 @@ public class YoloV5Ncnn
     public native Obj[] Detect(Bitmap bitmap, boolean use_gpu);
     public native Obj[] Detect1(Bitmap bitmap, boolean use_gpu);
     public native Obj[] Detect2(Bitmap bitmap, boolean use_gpu);
-    public native Obj[] Detect3(Bitmap bitmap, boolean use_gpu);
+    public native Obj[] DetectQr(Bitmap bitmap, boolean use_gpu);
     static {
         System.loadLibrary("yolov5ncnn");
     }

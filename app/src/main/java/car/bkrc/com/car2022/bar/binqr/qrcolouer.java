@@ -44,7 +44,7 @@ public class qrcolouer {
     private final Scalar LOWER_BLACK = new Scalar(0, 0, 0);
     private final Scalar UPPER_BLACK = new Scalar(180, 255, 66);
 
-    public int coler(Bitmap bitmap, Rect rects){
+    public int color(Bitmap bitmap, Rect rects){
         Mat mat1 = new Mat();
         Bitmap rgba = bitmap.copy(Bitmap.Config.ARGB_8888, false);
 //        Bitmap bitmap1 = null;
