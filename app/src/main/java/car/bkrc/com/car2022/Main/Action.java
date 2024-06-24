@@ -36,6 +36,7 @@ import com.google.zxing.EncodeHintType;
 import com.google.zxing.NotFoundException;
 import com.google.zxing.RGBLuminanceSource;
 import com.google.zxing.Result;
+import com.google.zxing.ResultPoint;
 import com.google.zxing.common.GlobalHistogramBinarizer;
 import com.google.zxing.multi.qrcode.QRCodeMultiReader;
 
@@ -53,8 +54,9 @@ import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Set;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import car.bkrc.com.car2022.ActivityView.FirstActivity;
 import car.bkrc.com.car2022.ActivityView.LoginActivity;
@@ -65,7 +67,7 @@ import car.bkrc.com.car2022.MessageBean.StateChangeBean;
 import car.bkrc.com.car2022.R;
 import car.bkrc.com.car2022.Utils.CameraUtile.XcApplication;
 import car.bkrc.com.car2022.Utils.OtherUtil.WiFiStateUtil;
-import car.bkrc.com.car2022.bar.binqr.qrcolouer;
+import car.bkrc.com.car2022.bar.binqr.qrcolor;
 import car.bkrc.com.car2022.bar.ocr.TestInferOcrTask;
 import car.bkrc.com.car2022.bar.opencv4camera.MainActivity;
 import car.bkrc.com.car2022.bar.yolov5.YoloV5Ncnn;
@@ -96,11 +98,11 @@ public class Action extends Fragment {
     private static int reds = 0,yellows = 0,greens = 0;
     private Button bt_set_initial,bt_start_initial,bt_left,bt_right,bt_up,bt_down,bt_set_left,bt_start_left,bt_set_right,bt_start_right,btn_position,btn_Carshape;
 
-    public static final String TAG = "RightFragment1";
+    public static final String TAG = "Main";
     private View view = null;
 
     private boolean dateGetState = true; // 主从车接收状态切换
-    private static car.bkrc.com.car2022.bar.binqr.qrcolouer qrcolouer = new qrcolouer();
+    private static qrcolor qrcolor = new qrcolor();
     public int stop_flag;
 
     Dialog dia;
@@ -206,14 +208,13 @@ public class Action extends Fragment {
 
                     connectTransport.receiveReturn( 2);
                     connectTransport.Delay_ms(1000);
-                    qr(5);
-                    qr(5);
-
+                    Qr_Recongenize(5);
+                    connectTransport.receiveEnd(2);
                 }else if(mByte[2] == 0x04){//车牌识别
 
                     connectTransport.receiveReturn( 2);
                     plan(mByte[3]);
-
+                    connectTransport.receiveEnd(2);
                 }else if(mByte[2] == 0x03){//信号灯识别
 
                     Log.e("信号灯:", "进入");
@@ -262,7 +263,7 @@ public class Action extends Fragment {
                 else if(mByte[2] == 0x0A){//汉字识别
                     connectTransport.receiveReturn( 2);
                     text();
-                    connectTransport.receiveReturn( 2);
+                    connectTransport.receiveEnd( 2);
                 }else if(mByte[2] == 0x11){ //打开道闸
                     connectTransport.receiveReturn( 2);
 
@@ -301,14 +302,9 @@ public class Action extends Fragment {
                 }
 
             }
-
         }
     };
 
-    private void chushi(){
-
-        bt_start_initial.performClick();
-    }
     private void jtbz(){
         while(jt){
             Traffic_Sign();
@@ -320,17 +316,21 @@ public class Action extends Fragment {
             }
         }
     }
+
     private void text(){
 //        chushi();
 //        bt_start_left.performClick();
-        String str = null;
+        String str = "";
         str = testInferOcrTask.ocr();
 
-        if(str != null){
+        if(str != ""){
             strtxt = str;
+            System.out.println(strtxt.length());
+            Log.e("text_send_ok", str);
+
             try {
                 byte[] bytes = bytesend(str.getBytes("gbk"));
-                Log.e("text_send_ok", str);
+                Log.e("语言公交站：", "" + bytes);
                 Connect_Transport.send_voice(bytes);
             }
             catch (UnsupportedEncodingException e) {
@@ -377,6 +377,8 @@ public class Action extends Fragment {
         planss = result1.toCharArray();
 
     }
+
+
     /*
     1 识别绿色二维码
     2 识别红色二维码
@@ -385,29 +387,23 @@ public class Action extends Fragment {
     5 识别全部二维码
     -1 红色识别不出来
      */
-    private void qr(int i){//二维码识别
-//        bt_start_left.performClick();
+    private void Qr_Recongenize(int i){//二维码识别
         int[] arr = new int[10];
-        setQr();
-        for(int j = 0;j<k ;j++){
-            arr[j]= qrcolouer.coler(bitmap,rect[j]);
-        }
-        System.out.println(Arrays.toString(arr));
+//        for(int j = 0;j<4 ;j++){
+//            arr[j]= qrcolouer.color(bitmap,rect[j]);
+//        }
         if(i == 5){
-            Qr_recognition(bitmap);
-            for(int j = 0; j < k;j++){
-                System.out.println("次数"+j);
-                Bitmap bmp = Bitmap.createBitmap(bitmap,(int)(rect[j].x),(int)(rect[j].y),(int)(rect[j].width),(int)(rect[j].height));
-                Qr_recognition(bmp);
-//                Qr_recognition(bmp);
+            for(int j = 0; j <1;j++){
+//                Bitmap bmp = Bitmap.createBitmap(bitmap,(rect[j].x),(rect[j].y),(rect[j].width),(rect[j].height));
+                Qr_Identify(bitmap);
+
             }
 
         }else{
             for(int j = 0; j < k;j++){
                 if(arr[j] == i){
-                    Bitmap bmp = Bitmap.createBitmap(bitmap,rect[i].x,rect[i].y,rect[i].width,rect[i].height);
-                    Qr_recognition(bmp);
-//                    Qr_recognition(bmp);
+//                    Bitmap bmp = Bitmap.createBitmap(bitmap,rect[i].x,rect[i].y,rect[i].width,rect[i].height);
+                    Qr_Identify(bitmap);
                 }
 
             }
@@ -440,7 +436,7 @@ public class Action extends Fragment {
                 view = inflater.inflate(R.layout.right_fragment1_mobilephone, container, false);
         }
 
-        
+
         FirstActivity.recvhandler = rehHandler;
         cameraCommandUtil = new CameraCommandUtil();
         // 获取当前上下文对象.
@@ -687,7 +683,7 @@ public class Action extends Fragment {
                     iniColor(bitmap);
                     break;
                 case R.id.btn_qr:
-                    qr(5);
+                    Qr_Recongenize(5);
                     break;
                 case R.id.btn_text:
                     String str = null;
@@ -782,21 +778,7 @@ public class Action extends Fragment {
         toastUtil.ShowToast("限速"+arr2[0]+"左转"+arr2[1]+"禁止左转"+arr2[2]+"掉头"+arr2[3]+"禁止掉头"+arr2[4]+"右转"+arr2[5]+"禁止右转"+arr2[6]+"直行"+arr2[7]+"禁止直行"+arr2[8]);
 
     }
-    //二维码位置查询
-    private void setQr(){
-        k = 0;
-        boolean ret_init = yolov5ncnn.InitQr(getContext().getAssets());
-        if (!ret_init)
-        {
-            Log.e("MainActivity", "yolov5ncnn Init failed");
-        }
-        if (bitmap == null)
-            return;
 
-        YoloV5Ncnn.Obj[] objects = yolov5ncnn.DetectQr(bitmap, false);
-
-        showObjects(objects);
-    }
 
 
     private class CameralClickListener implements View.OnClickListener{
@@ -876,7 +858,7 @@ public class Action extends Fragment {
     }
 
 
-    Rect[] rect = new Rect[10];
+
 
 
 
@@ -944,11 +926,7 @@ public class Action extends Fragment {
         if (reds >greens && reds > yellows){
             Toast.makeText(getActivity(),"红灯",Toast.LENGTH_SHORT).show();
             Log.e("TAG", "红灯" );
-//            FirstActivity.Connect_Transport.traffic_control(0x0E, 0x02, 0x01);
-//            FirstActivity.Connect_Transport.traffic_control(0x0F, 0x02, 0x01);
             inColor = 1;
-//            FirstActivity.Connect_Transport.shibie(1);
-
             reds = 0;
             greens = 0;
             yellows = 0;
@@ -956,10 +934,6 @@ public class Action extends Fragment {
         if (yellows > reds && yellows > greens){
             Toast.makeText(getActivity(),"黄灯",Toast.LENGTH_SHORT).show();
             Log.e("TAG", "黄灯: ");
-//            connectTransport.traffic(3);
-//            FirstActivity.Connect_Transport.shibie(3);
-//            FirstActivity.Connect_Transport.traffic_control(0x0E, 0x02, 0x03);
-//            FirstActivity.Connect_Transport.traffic_control(0x0F, 0x02, 0x03);
             inColor = 3;
             reds = 0;
             greens = 0;
@@ -968,10 +942,6 @@ public class Action extends Fragment {
         if (greens > reds && greens > yellows){
             Toast.makeText(getActivity(),"绿灯",Toast.LENGTH_SHORT).show();
             Log.e("TAG", "绿灯: " );
-//            connectTransport.traffic(2);
-//            FirstActivity.Connect_Transport.shibie(2);
-//            FirstActivity.Connect_Transport.traffic_control(0x0E, 0x02, 0x02);
-//            FirstActivity.Connect_Transport.traffic_control(0x0F, 0x02, 0x02);
             inColor = 2;
             reds = 0;
             greens = 0;
@@ -1045,140 +1015,168 @@ public class Action extends Fragment {
                     }
                 });
     }
-
-    private Timer timer;  // 识别次数限定
     private String result_qr;  // 识别结果统计
-    private String result_qr1; //要的数据
-    private String result_qr2; //要的数据
-    private int qr_flag = 0; // 识别次数
-    private List<String> listqr = new ArrayList<>();
+
+    private int Qr_Count = 0; // 识别次数
+    private int Qr_Flag = 0;  // 第几次识别
+    private List<String> QR_Data_One = new ArrayList<>();
+    private List<String> QR_Data_Two = new ArrayList<>();
     private Set<String> set = new HashSet<>();
-    /**
-     * 多二维码识别函数，输入带有多二维码的bitmap即可输出相应结果
-     * @param bitmap1
-     */
-    private void Qr_recognition(final Bitmap bitmap1)
-    {
 
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                // TODO Auto-generated method stub
-                Timer timer = new Timer();
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        Result[] result;
-                        result_qr = "";
-                        int width = bitmap1.getWidth();
-                        int height = bitmap1.getHeight();
-                        int[] pixels = new int[width * height];
-                        bitmap1.getPixels(pixels, 0, width, 0, 0, width, height);
-                        Hashtable<EncodeHintType, String> hints = new Hashtable<EncodeHintType, String>();
-                        hints.put(EncodeHintType.CHARACTER_SET, "utf-8");
-                        // 新建一个RGBLuminanceSource对象
-                        RGBLuminanceSource source = new RGBLuminanceSource(width, height, pixels);
-                        // 将图片转换成二进制图片
-                        BinaryBitmap binaryBitmap = new BinaryBitmap(new
-                                GlobalHistogramBinarizer(source));
-                        QRCodeMultiReader reader = new QRCodeMultiReader();// 初始化解析对象
-                        try {
-                            result = reader.decodeMultiple(binaryBitmap,
-                                    null);// 解析获取一个Result数组
-                            if (result != null) {
-                                for (Result kp : result) {
-                                    if (set.add("/home/" + kp.toString())) {
-                                        listqr.add("/home/" + kp.toString());
-                                        qrHandler.sendEmptyMessage(20);
-                                    }
-                                    Log.e("二维码信息", kp.toString());
-                                }
-                                qrHandler.sendEmptyMessage(55);  //                     检测到二维码
-                                timer.cancel();
-                            } else {
-                                qr_flag++;
-                                qrHandler.sendEmptyMessage(15);  // 没检测到
-                                if (qr_flag >= 3) {  // 识别次数设置
-                                    timer.cancel();
-                                    qrHandler.sendEmptyMessage(25);
-                                }
-                            }
-                        } catch (NotFoundException e) {
+    private AtomicInteger qrFlag = new AtomicInteger(0);
+    Rect[] rect_one = new Rect[10];
+    Rect[] rect_two = new Rect[10];
+    //二维码位置查询
+    public ResultPoint[] ensureFourCorners(ResultPoint[] points) {
+        if (points == null || points.length < 3 || points.length > 4) {
+            System.out.println("输入的角点数量无效");
+            return null;
+        }
 
-                            e.printStackTrace();
-                        }
-                    }
-                }, 100);
-            }
-        }).start();
+        if (points.length == 4) {
+            // 已经有四个角点，直接返回
+            return points;
+        }
+
+        // 假设前三个点按顺序给出，计算第四个点
+        ResultPoint p1 = points[0];
+        ResultPoint p2 = points[1];
+        ResultPoint p3 = points[2];
+
+        // 确定第四点的位置，这里简单假设角点构成矩形
+        double x4, y4;
+        if (p1.getX() == p2.getX() || p1.getY() == p2.getY()) {
+            // 如果p1和p2是水平或垂直对齐的，则第四点与p1和p3形成相同的对齐
+            x4 = p1.getX() == p2.getX() ? p3.getX() : p1.getX();
+            y4 = p1.getY() == p2.getY() ? p3.getY() : p1.getY();
+        } else {
+            // 如果p1和p2不水平也不垂直对齐，判断p3与哪个对齐
+            x4 = p3.getX() == p1.getX() || p3.getX() == p2.getX() ?
+                    (p3.getX() == p1.getX() ? p2.getX() : p1.getX()) : p3.getX();
+            y4 = p3.getY() == p1.getY() || p3.getY() == p2.getY() ?
+                    (p3.getY() == p1.getY() ? p2.getY() : p1.getY()) : p3.getY();
+        }
+
+        ResultPoint[] completePoints = new ResultPoint[4];
+        completePoints[0] = p1;
+        completePoints[1] = p2;
+        completePoints[2] = p3;
+        completePoints[3] = new ResultPoint((float) x4, (float) y4);
+
+        return completePoints;
     }
-//    /*
-//       多个二维码识别
-//       */
-//    public void QrShibie(Bitmap bMap){
-//        new Thread(() -> {
-////            Bitmap bMap = bitmap;
-//            int[] data2 = new int[bMap.getWidth() * bMap.getHeight()];
-//            bMap.getPixels(data2, 0, bMap.getWidth(), 0, 0, bMap.getWidth(), bMap.getHeight());
-//            RGBLuminanceSource rgbLuminanceSource = new RGBLuminanceSource(bMap.getWidth(),bMap.getHeight(),data2);
-//
-//            LuminanceSource source = rgbLuminanceSource;
-//            BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
-//            Hashtable<DecodeHintType, Object> hints = new Hashtable<DecodeHintType, Object>    ();
-//            hints.put(DecodeHintType.TRY_HARDER, Boolean.TRUE);
-//            MultiFormatReader mreader = new MultiFormatReader();
-//            GenericMultipleBarcodeReader multireader = new GenericMultipleBarcodeReader(mreader);
-//
-//            try {
-//                result2 = multireader.decodeMultiple(bitmap,hints);
-//                Log.e("TAG","" +result2.length );
-//
-//                qrHandler.sendEmptyMessage(55);
-//                System.out.println("正在识别");
-//
-//
-//
-//            } catch (NotFoundException e) {
-//                // TODO Auto-generated catch block
-//                e.printStackTrace();
-//                qrHandler.sendEmptyMessage(20);
-//            }
-//        }).start();
-//
-//    }
+    Rect[] rect = new Rect[10];
+    public void Qr_Rect(ResultPoint[] points){
 
 
+        StringBuilder sb = new StringBuilder();
+        int rect_count = 0;
+        for (ResultPoint point : points) {
+            sb.append("(").append(point.getX()).append(", ").append(point.getY()).append(") ");
+            rect[rect_count].x = (int) point.getX();
+            rect[rect_count].y = (int) point.getY();
+//            Log.e(TAG, "Points: " + rect[rect_count]);
+
+
+            rect_count ++;
+        }
+//        Log.e(TAG, "Points: " + sb.toString().trim());
+
+    }
+
+    /*
+   多个二维码识别
+   */
+    public void Qr_Identify(Bitmap bMap) {
+        if (++Qr_Flag == 2){
+            Qr_Flag = 0;
+        }
+        Qr_Count = 0;
+        // 使用ExecutorService管理线程，替代直接创建Thread
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+
+        executor.execute(() -> {
+            Result[] results;
+            result_qr = "";
+            Log.d("二维码识别:", "开启");
+
+            int width = bMap.getWidth();
+            int height = bMap.getHeight();
+            int[] pixels = new int[width * height];
+            bMap.getPixels(pixels, 0, width, 0, 0, width, height);
+
+            Hashtable<EncodeHintType, String> hints = new Hashtable<>();
+            hints.put(EncodeHintType.CHARACTER_SET, "utf-8");
+
+            RGBLuminanceSource source = new RGBLuminanceSource(width, height, pixels);
+            BinaryBitmap binaryBitmap = new BinaryBitmap(new GlobalHistogramBinarizer(source));
+            QRCodeMultiReader reader = new QRCodeMultiReader();
+
+            try {
+                results = reader.decodeMultiple(binaryBitmap, null);
+                if (results != null) {
+                    for (Result result : results) {
+                        String qrContent = result.getText();
+                        ResultPoint[] points = result.getResultPoints();
+                        ResultPoint[] completePoints = new ResultPoint[4];
+                        completePoints = ensureFourCorners(points);
+//                        StringBuilder sb = new StringBuilder();
+//                        for (ResultPoint point : completePoints) {
+//                            sb.append("(").append(point.getX()).append(", ").append(point.getY()).append(") ");
+//                        }
+//                        Log.e(TAG, "Points: " + sb.toString().trim());
+                        Qr_Rect(completePoints);
+
+//                        rect_one[Qr_Count] =
+                        if (set.add(qrContent)) { // 假设set是线程安全的或者在外部已妥善同步
+                            if(Qr_Flag == 0){
+                                QR_Data_One.add(qrContent);
+                                QR_Data_Two.clear();
+                            }
+                            else if(Qr_Flag == 1){
+                                QR_Data_Two.add(qrContent);
+                                QR_Data_One.clear();
+                            }
+                            qrFlag.incrementAndGet(); // 使用AtomicInteger避免并发问题
+                            Qr_Count ++;
+                        }
+                        set.clear();
+                    }
+                }
+                test_qrHandler.sendEmptyMessage(15);
+
+            } catch (NotFoundException e) {
+                e.printStackTrace();
+            } finally {
+                executor.shutdown(); // 关闭ExecutorService，不再接受新的任务
+            }
+        });
+    }
 
     // 二维码、车牌处理
     @SuppressLint("HandlerLeak")
-    Handler qrHandler = new Handler() {
+    Handler test_qrHandler = new Handler() {
         public void handleMessage(Message msg) {
             switch (msg.what) {
+                case 5:
+
+
+                    break;
                 case 10:
-                    System.out.println("Handler已经接收");
+
                     break;
                 case 15:
-                    Log.e(TAG, "正在进行第"+qr_flag+"次识别");
-                    break;
-                case 20:
-                    if(listqr.size() != 0){
-                        String[] strings = new String[listqr.size()];
-                        for (int i = 0; i < listqr.size(); i++) {
-                            strings[i] = listqr.get(i);
-                        }
-//                        longestSubstring = longestCommonSubstring(strings);
-                        if(listqr.size() == 4){
-
-                            chushi();
-                        }
+                    Log.d("识别二维码完毕:", "识别到"+Qr_Count+"个二维码");
+                    if (Qr_Flag == 0){
+                        Log.d("第一次二维码信息为", "" + QR_Data_One);
+                    }
+                    else if (Qr_Flag == 1){
+                        Log.d("第二次二维码信息为", "" + QR_Data_Two);
                     }
 
-                    result_qr1 = null;
-                    result_qr = null;
                     break;
-                case 25:
-                    Log.e(TAG, "未能识别成功");
-                    qr_flag = 0;
+                case 20:
+                    Log.d(TAG, "未能识别成功");
                     break;
 
                 default:
@@ -1361,8 +1359,8 @@ public class Action extends Fragment {
                         jt = false;
                     }
                 }
-                if(objects[i].label.equals("qr")){
-                    rect[k] = new Rect((int)(objects[i].x), (int)(objects[i].y), (int)(objects[i].w), (int) (objects[i].h));
+                if(objects[i].label.equals("Qr_Recongenize")){
+                    rect_one[k] = new Rect((int)(objects[i].x), (int)(objects[i].y), (int)(objects[i].w), (int) (objects[i].h));
                     k++;
                 }
                 String text = objects[i].label + " = " + String.format("%.1f", objects[i].prob * 100) + "%";

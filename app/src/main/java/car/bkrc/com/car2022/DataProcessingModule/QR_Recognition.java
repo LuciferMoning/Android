@@ -10,6 +10,7 @@ import java.io.FileNotFoundException;
 /**
  * 二维码识别工具类
  */
+
 public class QR_Recognition extends LuminanceSource {
 	private final byte[] luminances;
 	

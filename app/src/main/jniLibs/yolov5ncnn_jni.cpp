@@ -1289,7 +1289,7 @@ JNIEXPORT jobjectArray JNICALL Java_car_bkrc_com_car2022_bar_yolov5_YoloV5Ncnn_D
 //            "JZZX", "JZTX", "d","DT", "YZ", "ZZ", "ZX"
 //    };
     static const char* class_names[] = {
-            "qr"
+            "Qr_Recongenize"
     };
 
 
