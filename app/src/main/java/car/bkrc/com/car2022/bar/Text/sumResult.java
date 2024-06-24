@@ -1,5 +1,7 @@
 package car.bkrc.com.car2022.bar.Text;
 
+import java.util.List;
+
 public class sumResult {
 //    static boolean isNumber(String str) {//判断表达式是不是只有一个数字
 //        for(int i=0;i<str.length();i++) {
@@ -147,14 +149,14 @@ public class sumResult {
         System.out.println(findLongestCommonSubstring(strs));
         4453
      */
-    public static String findLongestCommonSubstring(String[] strs) {
-        if (strs == null || strs.length == 0) return "";
+    public static String findLongestCommonSubstring(List<String> strs) {
+        if (strs == null || strs.isEmpty()) return "";
 
         // 初始化最长公共子串为第一个字符串
-        String longestCommonStr = strs[0];
+        String longestCommonStr = strs.get(0);
 
-        for (int i = 1; i < strs.length; i++) {
-            longestCommonStr = findCommonSubstring(longestCommonStr, strs[i]);
+        for (int i = 1; i < strs.size(); i++) {
+            longestCommonStr = findCommonSubstring(longestCommonStr, strs.get(i));
             // 如果最长公共子串变空，说明没有公共子串，直接返回
             if (longestCommonStr.isEmpty()) break;
         }

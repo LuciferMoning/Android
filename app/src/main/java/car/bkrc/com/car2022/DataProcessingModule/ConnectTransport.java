@@ -145,7 +145,6 @@ public class ConnectTransport {
                             System.out.print(rbyte[i]);
                         }
                         if(rbyte[0] == 0x54 && rbyte[1] == 0x0A){
-                            Log.e(TAG, "run: "+"333" );
                             msg.what = 11;
                             msg.obj = rbyte;
                             reHandler.sendMessage(msg);
@@ -245,9 +244,14 @@ public class ConnectTransport {
     private void Send_Data(int Tx_data[]){
 
         Tx_data[6] = ChecksumCalculations(Tx_data);
-        byte Tx_Buff[] = {(byte)Tx_data[0], (byte)Tx_data[1], (byte)Tx_data[2], (byte)Tx_data[3], (byte)Tx_data[4], (byte)Tx_data[5], (byte)Tx_data[6], (byte)Tx_data[7]};
+        byte[] Tx_Buff = {(byte)Tx_data[0], (byte)Tx_data[1], (byte)Tx_data[2], (byte)Tx_data[3], (byte)Tx_data[4], (byte)Tx_data[5], (byte)Tx_data[6], (byte)Tx_data[7]};
 
-        Log.e(TAG, "SendData: " + Tx_Buff);
+        StringBuilder sb = new StringBuilder();
+        for (byte b : Tx_Buff) {
+            sb.append(String.format("%02X ", b));
+        }
+        Log.e(TAG, "SendData: " + sb.toString().trim());
+
         if (XcApplication.isserial == XcApplication.Mode.SOCKET) {
             XcApplication.executorServicetor.execute(new Runnable() {
                 @Override

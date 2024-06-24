@@ -14,9 +14,9 @@ import org.opencv.imgproc.Imgproc;
 import java.util.ArrayList;
 import java.util.List;
 
-public class qrcolouer {
+public class qrcolor {
 
-    public qrcolouer(){
+    public qrcolor(){
     }
 
     // 设定绿色阈值

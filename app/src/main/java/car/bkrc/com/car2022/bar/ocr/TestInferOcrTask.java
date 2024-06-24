@@ -5,7 +5,6 @@ import android.graphics.Point;
 import android.util.Log;
 
 import com.baidu.ai.edge.core.base.BaseException;
-import com.baidu.ai.edge.core.base.CallException;
 import com.baidu.ai.edge.core.infer.InferConfig;
 import com.baidu.ai.edge.core.infer.InferManager;
 import com.baidu.ai.edge.core.ocr.OcrResultModel;
@@ -27,12 +26,11 @@ public class TestInferOcrTask {
     private static final String SERIAL_NUM = " ";
     public static String restr="";
 
-
     public String ocr()  {
             restr = "";
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
+//            new Thread(new Runnable() {
+//                @Override
+//                public void run() {
                     try {
                         InferConfig config = new InferConfig(XcApplication.getContext().getAssets(), "infer");
                         InferManager manager = new InferManager(XcApplication.getContext(), config, SERIAL_NUM);
@@ -72,13 +70,11 @@ public class TestInferOcrTask {
                             manager.destroy();
 
                         }
-                    } catch (CallException e) {
-                        e.printStackTrace();
                     } catch (BaseException e) {
                         e.printStackTrace();
                     }
-                }
-            }).start();
+//                }
+//            }).start();
             /* 1. 准备配置类，初始化Manager类。可以在onCreate或onResume中触发，请在非UI线程里调用 */
 
 
